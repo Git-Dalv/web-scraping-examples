@@ -1,0 +1,558 @@
+{
+  "generated_at": "2025-12-15T12:50:51.553980Z",
+  "threshold_percent": 5.0,
+  "summary": {
+    "total_coins_monitored": 10,
+    "coins_with_alerts": 8,
+    "coins_normal": 2,
+    "total_news_articles": 30,
+    "total_movements_detected": 16
+  },
+  "coins": [
+    {
+      "coin": "Bitcoin",
+      "symbol": "BTC",
+      "coin_id": "bitcoin",
+      "current_price": 89856.0,
+      "status": "alert",
+      "message": "Significant price movement detected (1 movement(s))",
+      "movements": [
+        {
+          "direction": "DOWN",
+          "change_percent": -5.17,
+          "from_price": 93103.99,
+          "to_price": 88291.27,
+          "timestamp": "2025-12-09T03:00:00Z",
+          "alert_type": "DROP",
+          "news_count": 2,
+          "news_positive": 1,
+          "news_negative": 1,
+          "news_neutral": 0,
+          "related_news": [
+            {
+              "title": "These Three Metrics Show Bitcoin Found Strong Support Near $80,000",
+              "url": "https://www.coindesk.com/markets/2025/12/12/these-three-metrics-show-bitcoin-found-strong-support-near-usd80-000",
+              "sentiment": "POSITIVE",
+              "published_at": "2025-12-13T22:00:00Z"
+            },
+            {
+              "title": "Bitcoin Drops Below $90K Amid Fading Risk Appetite Ahead of Key Macro Events",
+              "url": "https://www.coindesk.com/markets/2025/12/14/bitcoin-dips-below-usd90k-amid-fading-risk-appetite-ahead-of-key-macro-events",
+              "sentiment": "NEGATIVE",
+              "published_at": "2025-12-14T16:50:18Z"
+            }
+          ]
+        }
+      ],
+      "total_news": 2,
+      "total_positive": 1,
+      "total_negative": 1,
+      "total_neutral": 0,
+      "scraped_at": "2025-12-15 12:49"
+    },
+    {
+      "coin": "Ethereum",
+      "symbol": "ETH",
+      "coin_id": "ethereum",
+      "current_price": 3144.56,
+      "status": "alert",
+      "message": "Significant price movement detected (3 movement(s))",
+      "movements": [
+        {
+          "direction": "UP",
+          "change_percent": 6.63,
+          "from_price": 3156.81,
+          "to_price": 3366.12,
+          "timestamp": "2025-12-08T03:00:00Z",
+          "alert_type": "SURGE",
+          "news_count": 2,
+          "news_positive": 2,
+          "news_negative": 0,
+          "news_neutral": 0,
+          "related_news": [
+            {
+              "title": "BlackRock Files for Staked Ethereum ETF",
+              "url": "https://www.coindesk.com/markets/2025/12/08/blackrock-files-for-staked-ethereum-etf-aiming-to-bring-yield-to-the-masses",
+              "sentiment": "POSITIVE",
+              "published_at": "2025-12-08T16:54:22Z"
+            },
+            {
+              "title": "Ethereum’s P2P Layer Is Improving Just as Institutional ETH Buys Pick Up",
+              "url": "https://www.coindesk.com/markets/2025/12/09/ethereum-s-p2p-layer-is-improving-just-as-institutional-eth-buys-pick-up",
+              "sentiment": "POSITIVE",
+              "published_at": "2025-12-09T16:30:00Z"
+            }
+          ]
+        },
+        {
+          "direction": "DOWN",
+          "change_percent": -5.26,
+          "from_price": 3366.12,
+          "to_price": 3188.97,
+          "timestamp": "2025-12-09T03:00:00Z",
+          "alert_type": "DROP",
+          "news_count": 2,
+          "news_positive": 1,
+          "news_negative": 0,
+          "news_neutral": 1,
+          "related_news": [
+            {
+              "title": "Breakout or Bull Trap? DOGE Jumps Above Resistance on Ethereum Strength",
+              "url": "https://www.coindesk.com/markets/2025/12/10/breakout-or-bull-trap-doge-jumps-above-resistance-on-ethereum-strength",
+              "sentiment": "NEUTRAL",
+              "published_at": "2025-12-10T08:39:59Z"
+            },
+            {
+              "title": "Superstate Rolls Out Direct Stock Issuance for Public Companies on Ethereum, Solana",
+              "url": "https://www.coindesk.com/business/2025/12/10/superstate-rolls-out-direct-stock-issuance-for-public-companies-on-ethereum-solana",
+              "sentiment": "POSITIVE",
+              "published_at": "2025-12-10T16:00:00Z"
+            }
+          ]
+        },
+        {
+          "direction": "DOWN",
+          "change_percent": -5.61,
+          "from_price": 3252.95,
+          "to_price": 3070.43,
+          "timestamp": "2025-12-11T03:00:00Z",
+          "alert_type": "DROP",
+          "news_count": 2,
+          "news_positive": 2,
+          "news_negative": 0,
+          "news_neutral": 0,
+          "related_news": [
+            {
+              "title": "XRP Lands on Solana, Ethereum and Others, in Boost for Ripple Ecosystem",
+              "url": "https://www.coindesk.com/markets/2025/12/12/xrp-lands-on-solana-ethereum-and-others-in-boost-for-ripple-ecosystem",
+              "sentiment": "POSITIVE",
+              "published_at": "2025-12-12T07:45:00Z"
+            },
+            {
+              "title": "Backed, Chainlink Unveil xBridge to Move Tokenized Stocks Between Solana and Ethereum",
+              "url": "https://www.coindesk.com/web3/2025/12/12/backed-chainlink-launch-xbridge-to-move-tokenized-stocks-between-solana-and-ethereum",
+              "sentiment": "POSITIVE",
+              "published_at": "2025-12-12T18:00:00Z"
+            }
+          ]
+        }
+      ],
+      "total_news": 6,
+      "total_positive": 5,
+      "total_negative": 0,
+      "total_neutral": 1,
+      "scraped_at": "2025-12-15 12:49"
+    },
+    {
+      "coin": "Tether",
+      "symbol": "USDT",
+      "coin_id": "tether",
+      "current_price": 1.0,
+      "status": "normal",
+      "message": "Price movement within normal range (< +/-5.0%)",
+      "movements": [],
+      "total_news": 0,
+      "scraped_at": "2025-12-15 12:49"
+    },
+    {
+      "coin": "BNB",
+      "symbol": "BNB",
+      "coin_id": "binancecoin",
+      "current_price": 890.36,
+      "status": "alert",
+      "message": "Significant price movement detected (1 movement(s))",
+      "movements": [
+        {
+          "direction": "DOWN",
+          "change_percent": -5.3,
+          "from_price": 910.15,
+          "to_price": 861.87,
+          "timestamp": "2025-12-08T03:00:00Z",
+          "alert_type": "DROP",
+          "news_count": 0,
+          "news_positive": 0,
+          "news_negative": 0,
+          "news_neutral": 0,
+          "related_news": []
+        }
+      ],
+      "total_news": 0,
+      "total_positive": 0,
+      "total_negative": 0,
+      "total_neutral": 0,
+      "scraped_at": "2025-12-15 12:49"
+    },
+    {
+      "coin": "XRP",
+      "symbol": "XRP",
+      "coin_id": "ripple",
+      "current_price": 2.0,
+      "status": "alert",
+      "message": "Significant price movement detected (1 movement(s))",
+      "movements": [
+        {
+          "direction": "DOWN",
+          "change_percent": -5.19,
+          "from_price": 2.1,
+          "to_price": 1.99,
+          "timestamp": "2025-12-08T03:00:00Z",
+          "alert_type": "DROP",
+          "news_count": 2,
+          "news_positive": 0,
+          "news_negative": 1,
+          "news_neutral": 1,
+          "related_news": [
+            {
+              "title": "Wall Street Saw Ripple as 90% XRP — Offered $500M, but With Safety Net: Bloomberg",
+              "url": "https://www.coindesk.com/markets/2025/12/08/wall-street-saw-ripple-as-90-xrp-then-offered-usd500m-with-a-safety-net",
+              "sentiment": "NEUTRAL",
+              "published_at": "2025-12-08T16:32:40Z"
+            },
+            {
+              "title": "XRP Sell Pressure Emerges as Ripple Linked Token Fails to Sustain $2.12 Break",
+              "url": "https://www.coindesk.com/markets/2025/12/10/xrp-sell-pressure-emerges-as-ripple-linked-token-fails-to-sustain-usd2-12-break",
+              "sentiment": "NEGATIVE",
+              "published_at": "2025-12-10T09:00:17Z"
+            }
+          ]
+        }
+      ],
+      "total_news": 2,
+      "total_positive": 0,
+      "total_negative": 1,
+      "total_neutral": 1,
+      "scraped_at": "2025-12-15 12:49"
+    },
+    {
+      "coin": "USDC",
+      "symbol": "USDC",
+      "coin_id": "usd-coin",
+      "current_price": 0.999951,
+      "status": "normal",
+      "message": "Price movement within normal range (< +/-5.0%)",
+      "movements": [],
+      "total_news": 0,
+      "scraped_at": "2025-12-15 12:49"
+    },
+    {
+      "coin": "Solana",
+      "symbol": "SOL",
+      "coin_id": "solana",
+      "current_price": 132.53,
+      "status": "alert",
+      "message": "Significant price movement detected (3 movement(s))",
+      "movements": [
+        {
+          "direction": "DOWN",
+          "change_percent": -5.24,
+          "from_price": 138.01,
+          "to_price": 130.78,
+          "timestamp": "2025-12-08T03:00:00Z",
+          "alert_type": "DROP",
+          "news_count": 2,
+          "news_positive": 2,
+          "news_negative": 0,
+          "news_neutral": 0,
+          "related_news": [
+            {
+              "title": "State Street and Galaxy to Launch Tokenized Liquidity Fund on Solana in 2026",
+              "url": "https://www.coindesk.com/markets/2025/12/10/state-street-and-galaxy-to-launch-tokenized-liquidity-fund-on-solana-in-2026",
+              "sentiment": "POSITIVE",
+              "published_at": "2025-12-11T01:30:00Z"
+            },
+            {
+              "title": "Bhutan Debuts TER Gold-Backed Token on Solana",
+              "url": "https://www.coindesk.com/business/2025/12/10/bhutan-debuts-ter-gold-backed-token-on-solana",
+              "sentiment": "POSITIVE",
+              "published_at": "2025-12-11T05:00:00Z"
+            }
+          ]
+        },
+        {
+          "direction": "UP",
+          "change_percent": 5.7,
+          "from_price": 130.78,
+          "to_price": 138.24,
+          "timestamp": "2025-12-11T03:00:00Z",
+          "alert_type": "SURGE",
+          "news_count": 2,
+          "news_positive": 2,
+          "news_negative": 0,
+          "news_neutral": 0,
+          "related_news": [
+            {
+              "title": "JPMorgan Pushes Deeper Into Tokenization With Galaxys Debt Issuance on Solana",
+              "url": "https://www.coindesk.com/business/2025/12/11/jpmorgan-pushes-deeper-into-tokenization-with-galaxy-s-debt-issuance-on-solana",
+              "sentiment": "POSITIVE",
+              "published_at": "2025-12-11T22:16:30Z"
+            },
+            {
+              "title": "XRP Lands on Solana, Ethereum and Others, in Boost for Ripple Ecosystem",
+              "url": "https://www.coindesk.com/markets/2025/12/12/xrp-lands-on-solana-ethereum-and-others-in-boost-for-ripple-ecosystem",
+              "sentiment": "POSITIVE",
+              "published_at": "2025-12-12T07:45:00Z"
+            }
+          ]
+        },
+        {
+          "direction": "DOWN",
+          "change_percent": -5.13,
+          "from_price": 138.24,
+          "to_price": 131.15,
+          "timestamp": "2025-12-12T03:00:00Z",
+          "alert_type": "DROP",
+          "news_count": 2,
+          "news_positive": 2,
+          "news_negative": 0,
+          "news_neutral": 0,
+          "related_news": [
+            {
+              "title": "XRP Lands on Solana, Ethereum and Others, in Boost for Ripple Ecosystem",
+              "url": "https://www.coindesk.com/markets/2025/12/12/xrp-lands-on-solana-ethereum-and-others-in-boost-for-ripple-ecosystem",
+              "sentiment": "POSITIVE",
+              "published_at": "2025-12-12T07:45:00Z"
+            },
+            {
+              "title": "Backed, Chainlink Unveil xBridge to Move Tokenized Stocks Between Solana and Ethereum",
+              "url": "https://www.coindesk.com/web3/2025/12/12/backed-chainlink-launch-xbridge-to-move-tokenized-stocks-between-solana-and-ethereum",
+              "sentiment": "POSITIVE",
+              "published_at": "2025-12-12T18:00:00Z"
+            }
+          ]
+        }
+      ],
+      "total_news": 6,
+      "total_positive": 6,
+      "total_negative": 0,
+      "total_neutral": 0,
+      "scraped_at": "2025-12-15 12:49"
+    },
+    {
+      "coin": "Lido Staked Ether",
+      "symbol": "STETH",
+      "coin_id": "staked-ether",
+      "current_price": 3144.71,
+      "status": "alert",
+      "message": "Significant price movement detected (3 movement(s))",
+      "movements": [
+        {
+          "direction": "UP",
+          "change_percent": 6.53,
+          "from_price": 3155.64,
+          "to_price": 3361.56,
+          "timestamp": "2025-12-08T03:00:00Z",
+          "alert_type": "SURGE",
+          "news_count": 2,
+          "news_positive": 2,
+          "news_negative": 0,
+          "news_neutral": 0,
+          "related_news": [
+            {
+              "title": "Staked Ether Is Creating a Benchmark for the Crypto Economy, Says ARK Invest",
+              "url": "https://coindesk.com/markets/2024/10/17/staked-ether-is-creating-a-benchmark-for-the-crypto-economy-says-ark-invest",
+              "sentiment": "POSITIVE",
+              "published_at": "2024-10-17T22:06:55Z"
+            },
+            {
+              "title": "BlackRock Takes First Step Toward a Staked Ether ETF",
+              "url": "https://www.coindesk.com/markets/2025/11/20/blackrock-takes-first-step-toward-a-staked-eth-etf",
+              "sentiment": "POSITIVE",
+              "published_at": "2025-11-20T10:37:51Z"
+            }
+          ]
+        },
+        {
+          "direction": "DOWN",
+          "change_percent": -5.12,
+          "from_price": 3361.56,
+          "to_price": 3189.54,
+          "timestamp": "2025-12-09T03:00:00Z",
+          "alert_type": "DROP",
+          "news_count": 2,
+          "news_positive": 2,
+          "news_negative": 0,
+          "news_neutral": 0,
+          "related_news": [
+            {
+              "title": "Staked Ether Is Creating a Benchmark for the Crypto Economy, Says ARK Invest",
+              "url": "https://coindesk.com/markets/2024/10/17/staked-ether-is-creating-a-benchmark-for-the-crypto-economy-says-ark-invest",
+              "sentiment": "POSITIVE",
+              "published_at": "2024-10-17T22:06:55Z"
+            },
+            {
+              "title": "BlackRock Takes First Step Toward a Staked Ether ETF",
+              "url": "https://www.coindesk.com/markets/2025/11/20/blackrock-takes-first-step-toward-a-staked-eth-etf",
+              "sentiment": "POSITIVE",
+              "published_at": "2025-11-20T10:37:51Z"
+            }
+          ]
+        },
+        {
+          "direction": "DOWN",
+          "change_percent": -5.45,
+          "from_price": 3250.23,
+          "to_price": 3072.98,
+          "timestamp": "2025-12-11T03:00:00Z",
+          "alert_type": "DROP",
+          "news_count": 2,
+          "news_positive": 2,
+          "news_negative": 0,
+          "news_neutral": 0,
+          "related_news": [
+            {
+              "title": "Staked Ether Is Creating a Benchmark for the Crypto Economy, Says ARK Invest",
+              "url": "https://coindesk.com/markets/2024/10/17/staked-ether-is-creating-a-benchmark-for-the-crypto-economy-says-ark-invest",
+              "sentiment": "POSITIVE",
+              "published_at": "2024-10-17T22:06:55Z"
+            },
+            {
+              "title": "BlackRock Takes First Step Toward a Staked Ether ETF",
+              "url": "https://www.coindesk.com/markets/2025/11/20/blackrock-takes-first-step-toward-a-staked-eth-etf",
+              "sentiment": "POSITIVE",
+              "published_at": "2025-11-20T10:37:51Z"
+            }
+          ]
+        }
+      ],
+      "total_news": 6,
+      "total_positive": 6,
+      "total_negative": 0,
+      "total_neutral": 0,
+      "scraped_at": "2025-12-15 12:49"
+    },
+    {
+      "coin": "TRON",
+      "symbol": "TRX",
+      "coin_id": "tron",
+      "current_price": 0.281359,
+      "status": "alert",
+      "message": "Significant price movement detected (1 movement(s))",
+      "movements": [
+        {
+          "direction": "DOWN",
+          "change_percent": -5.03,
+          "from_price": 0.29,
+          "to_price": 0.27,
+          "timestamp": "2025-12-08T03:00:00Z",
+          "alert_type": "DROP",
+          "news_count": 2,
+          "news_positive": 1,
+          "news_negative": 0,
+          "news_neutral": 1,
+          "related_news": [
+            {
+              "title": "Coinbase CEO Armstrong Says Banks That Dont Adapt to Stablecoins Will Be Left Behind",
+              "url": "https://www.coindesk.com/business/2025/12/03/coinbase-is-partnering-with-major-u-s-banks-on-stablecoin-and-crypto-pilots",
+              "sentiment": "POSITIVE",
+              "published_at": "2025-12-03T22:33:29Z"
+            },
+            {
+              "title": "XRP Slides as Traders Take Bitcoin Profits, With ETF Flows Still Strong",
+              "url": "https://www.coindesk.com/markets/2025/12/11/xrp-slides-as-traders-take-bitcoin-profits-with-etf-flows-still-strong",
+              "sentiment": "NEUTRAL",
+              "published_at": "2025-12-11T08:18:32Z"
+            }
+          ]
+        }
+      ],
+      "total_news": 2,
+      "total_positive": 1,
+      "total_negative": 0,
+      "total_neutral": 1,
+      "scraped_at": "2025-12-15 12:49"
+    },
+    {
+      "coin": "Dogecoin",
+      "symbol": "DOGE",
+      "coin_id": "dogecoin",
+      "current_price": 0.136887,
+      "status": "alert",
+      "message": "Significant price movement detected (3 movement(s))",
+      "movements": [
+        {
+          "direction": "UP",
+          "change_percent": 5.43,
+          "from_price": 0.14,
+          "to_price": 0.15,
+          "timestamp": "2025-12-08T03:00:00Z",
+          "alert_type": "SURGE",
+          "news_count": 2,
+          "news_positive": 0,
+          "news_negative": 0,
+          "news_neutral": 2,
+          "related_news": [
+            {
+              "title": "Dogecoin Activity Hits 3-Month High but DOGE Price Action Remains Range-Bound",
+              "url": "https://www.coindesk.com/markets/2025/12/07/dogecoin-activity-hits-3-month-high-but-doge-price-action-remains-range-bound",
+              "sentiment": "NEUTRAL",
+              "published_at": "2025-12-07T15:58:55Z"
+            },
+            {
+              "title": "Dogecoin Holds $0.14 Floor as Network Activity Hits 3-Month High",
+              "url": "https://www.coindesk.com/markets/2025/12/09/dogecoin-holds-usd0-14-floor-as-network-activity-hits-3-month-high",
+              "sentiment": "NEUTRAL",
+              "published_at": "2025-12-09T07:29:51Z"
+            }
+          ]
+        },
+        {
+          "direction": "DOWN",
+          "change_percent": -5.4,
+          "from_price": 0.15,
+          "to_price": 0.14,
+          "timestamp": "2025-12-09T03:00:00Z",
+          "alert_type": "DROP",
+          "news_count": 2,
+          "news_positive": 1,
+          "news_negative": 0,
+          "news_neutral": 1,
+          "related_news": [
+            {
+              "title": "Dogecoin Holds $0.14 Floor as Network Activity Hits 3-Month High",
+              "url": "https://www.coindesk.com/markets/2025/12/09/dogecoin-holds-usd0-14-floor-as-network-activity-hits-3-month-high",
+              "sentiment": "NEUTRAL",
+              "published_at": "2025-12-09T07:29:51Z"
+            },
+            {
+              "title": "Dogecoin Surges as Ether Zooms 8%, Sparking Bullish Reversal For Memecoins",
+              "url": "https://www.coindesk.com/markets/2025/12/10/dogecoin-surges-as-ether-zooms-8-sparking-bullish-reversal-for-memecoins",
+              "sentiment": "POSITIVE",
+              "published_at": "2025-12-09T22:27:47Z"
+            }
+          ]
+        },
+        {
+          "direction": "DOWN",
+          "change_percent": -5.04,
+          "from_price": 0.14,
+          "to_price": 0.14,
+          "timestamp": "2025-12-11T03:00:00Z",
+          "alert_type": "DROP",
+          "news_count": 2,
+          "news_positive": 0,
+          "news_negative": 1,
+          "news_neutral": 1,
+          "related_news": [
+            {
+              "title": "Ether, Dogecoin, Solana Slide as Bitcoin Fails to Sustain Early-Week Breakout",
+              "url": "https://www.coindesk.com/markets/2025/12/11/ether-dogecoin-solana-slide-as-bitcoin-fails-to-sustain-early-week-breakout",
+              "sentiment": "NEGATIVE",
+              "published_at": "2025-12-11T10:03:41Z"
+            },
+            {
+              "title": "Dogecoin Hovers Near Key Support as Fed Easing Fails to Spark Risk Rally",
+              "url": "https://www.coindesk.com/markets/2025/12/12/dogecoin-hovers-near-key-support-as-fed-easing-fails-to-spark-risk-rally",
+              "sentiment": "NEUTRAL",
+              "published_at": "2025-12-12T08:45:24Z"
+            }
+          ]
+        }
+      ],
+      "total_news": 6,
+      "total_positive": 1,
+      "total_negative": 1,
+      "total_neutral": 4,
+      "scraped_at": "2025-12-15 12:49"
+    }
+  ]
+}
