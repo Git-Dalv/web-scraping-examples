@@ -1,19 +1,19 @@
 {
-  "generated_at": "2025-12-15T12:50:51.553980Z",
-  "threshold_percent": 5.0,
+  "generated_at": "2025-12-15T15:02:54.529688Z",
+  "threshold_percent": 0.05,
   "summary": {
-    "total_coins_monitored": 10,
-    "coins_with_alerts": 8,
-    "coins_normal": 2,
-    "total_news_articles": 30,
-    "total_movements_detected": 16
+    "total_coins_monitored": 15,
+    "coins_with_alerts": 12,
+    "coins_normal": 3,
+    "total_news_articles": 46,
+    "total_movements_detected": 27
   },
   "coins": [
     {
       "coin": "Bitcoin",
       "symbol": "BTC",
       "coin_id": "bitcoin",
-      "current_price": 89856.0,
+      "current_price": 89643.0,
       "status": "alert",
       "message": "Significant price movement detected (1 movement(s))",
       "movements": [
@@ -48,20 +48,20 @@
       "total_positive": 1,
       "total_negative": 1,
       "total_neutral": 0,
-      "scraped_at": "2025-12-15 12:49"
+      "scraped_at": "2025-12-15 15:00"
     },
     {
       "coin": "Ethereum",
       "symbol": "ETH",
       "coin_id": "ethereum",
-      "current_price": 3144.56,
+      "current_price": 3156.92,
       "status": "alert",
       "message": "Significant price movement detected (3 movement(s))",
       "movements": [
         {
           "direction": "UP",
-          "change_percent": 6.63,
-          "from_price": 3156.81,
+          "change_percent": 7.19,
+          "from_price": 3140.35,
           "to_price": 3366.12,
           "timestamp": "2025-12-08T03:00:00Z",
           "alert_type": "SURGE",
@@ -141,7 +141,7 @@
       "total_positive": 5,
       "total_negative": 0,
       "total_neutral": 1,
-      "scraped_at": "2025-12-15 12:49"
+      "scraped_at": "2025-12-15 15:00"
     },
     {
       "coin": "Tether",
@@ -149,23 +149,23 @@
       "coin_id": "tether",
       "current_price": 1.0,
       "status": "normal",
-      "message": "Price movement within normal range (< +/-5.0%)",
+      "message": "Price movement within normal range (< +/-0.05%)",
       "movements": [],
       "total_news": 0,
-      "scraped_at": "2025-12-15 12:49"
+      "scraped_at": "2025-12-15 15:00"
     },
     {
       "coin": "BNB",
       "symbol": "BNB",
       "coin_id": "binancecoin",
-      "current_price": 890.36,
+      "current_price": 887.76,
       "status": "alert",
       "message": "Significant price movement detected (1 movement(s))",
       "movements": [
         {
           "direction": "DOWN",
-          "change_percent": -5.3,
-          "from_price": 910.15,
+          "change_percent": -5.12,
+          "from_price": 908.38,
           "to_price": 861.87,
           "timestamp": "2025-12-08T03:00:00Z",
           "alert_type": "DROP",
@@ -180,72 +180,72 @@
       "total_positive": 0,
       "total_negative": 0,
       "total_neutral": 0,
-      "scraped_at": "2025-12-15 12:49"
+      "scraped_at": "2025-12-15 15:00"
     },
     {
       "coin": "XRP",
       "symbol": "XRP",
       "coin_id": "ripple",
-      "current_price": 2.0,
+      "current_price": 1.99,
       "status": "alert",
       "message": "Significant price movement detected (1 movement(s))",
       "movements": [
         {
           "direction": "DOWN",
-          "change_percent": -5.19,
-          "from_price": 2.1,
+          "change_percent": -5.04,
+          "from_price": 2.09,
           "to_price": 1.99,
           "timestamp": "2025-12-08T03:00:00Z",
           "alert_type": "DROP",
           "news_count": 2,
-          "news_positive": 0,
-          "news_negative": 1,
-          "news_neutral": 1,
+          "news_positive": 2,
+          "news_negative": 0,
+          "news_neutral": 0,
           "related_news": [
             {
-              "title": "Wall Street Saw Ripple as 90% XRP — Offered $500M, but With Safety Net: Bloomberg",
-              "url": "https://www.coindesk.com/markets/2025/12/08/wall-street-saw-ripple-as-90-xrp-then-offered-usd500m-with-a-safety-net",
-              "sentiment": "NEUTRAL",
-              "published_at": "2025-12-08T16:32:40Z"
+              "title": "Ripple Payments Lands First European Bank Client in AMINA",
+              "url": "https://www.coindesk.com/markets/2025/12/12/ripple-payments-lands-first-european-bank-client-in-amina",
+              "sentiment": "POSITIVE",
+              "published_at": "2025-12-12T14:53:12Z"
             },
             {
-              "title": "XRP Sell Pressure Emerges as Ripple Linked Token Fails to Sustain $2.12 Break",
-              "url": "https://www.coindesk.com/markets/2025/12/10/xrp-sell-pressure-emerges-as-ripple-linked-token-fails-to-sustain-usd2-12-break",
-              "sentiment": "NEGATIVE",
-              "published_at": "2025-12-10T09:00:17Z"
+              "title": "Five Crypto Firms Win Initial Approvals as Trust Banks, Including Ripple, Circle, BitGo",
+              "url": "https://www.coindesk.com/policy/2025/12/12/five-crypto-firms-step-closer-to-become-a-bank-including-ripple-circle-fidelity",
+              "sentiment": "POSITIVE",
+              "published_at": "2025-12-12T19:39:19Z"
             }
           ]
         }
       ],
       "total_news": 2,
-      "total_positive": 0,
-      "total_negative": 1,
-      "total_neutral": 1,
-      "scraped_at": "2025-12-15 12:49"
+      "total_positive": 2,
+      "total_negative": 0,
+      "total_neutral": 0,
+      "scraped_at": "2025-12-15 15:00"
     },
     {
       "coin": "USDC",
       "symbol": "USDC",
       "coin_id": "usd-coin",
-      "current_price": 0.999951,
+      "current_price": 0.999882,
       "status": "normal",
-      "message": "Price movement within normal range (< +/-5.0%)",
+      "message": "Price movement within normal range (< +/-0.05%)",
       "movements": [],
       "total_news": 0,
-      "scraped_at": "2025-12-15 12:49"
+      "scraped_at": "2025-12-15 15:00"
     },
     {
       "coin": "Solana",
       "symbol": "SOL",
       "coin_id": "solana",
-      "current_price": 132.53,
+      "current_price": 132.25,
       "status": "alert",
       "message": "Significant price movement detected (3 movement(s))",
       "movements": [
         {
           "direction": "DOWN",
-          "change_percent": -5.24,
-          "from_price": 138.01,
+          "change_percent": -5.53,
+          "from_price": 138.43,
           "to_price": 130.78,
           "timestamp": "2025-12-08T03:00:00Z",
           "alert_type": "DROP",
@@ -325,20 +325,20 @@
       "total_positive": 6,
       "total_negative": 0,
       "total_neutral": 0,
-      "scraped_at": "2025-12-15 12:49"
+      "scraped_at": "2025-12-15 15:00"
     },
     {
       "coin": "Lido Staked Ether",
       "symbol": "STETH",
       "coin_id": "staked-ether",
-      "current_price": 3144.71,
+      "current_price": 3155.31,
       "status": "alert",
       "message": "Significant price movement detected (3 movement(s))",
       "movements": [
         {
           "direction": "UP",
-          "change_percent": 6.53,
-          "from_price": 3155.64,
+          "change_percent": 7.07,
+          "from_price": 3139.46,
           "to_price": 3361.56,
           "timestamp": "2025-12-08T03:00:00Z",
           "alert_type": "SURGE",
@@ -418,19 +418,19 @@
       "total_positive": 6,
       "total_negative": 0,
       "total_neutral": 0,
-      "scraped_at": "2025-12-15 12:49"
+      "scraped_at": "2025-12-15 15:00"
     },
     {
       "coin": "TRON",
       "symbol": "TRX",
       "coin_id": "tron",
-      "current_price": 0.281359,
+      "current_price": 0.281822,
       "status": "alert",
       "message": "Significant price movement detected (1 movement(s))",
       "movements": [
         {
           "direction": "DOWN",
-          "change_percent": -5.03,
+          "change_percent": -5.1,
           "from_price": 0.29,
           "to_price": 0.27,
           "timestamp": "2025-12-08T03:00:00Z",
@@ -459,19 +459,19 @@
       "total_positive": 1,
       "total_negative": 0,
       "total_neutral": 1,
-      "scraped_at": "2025-12-15 12:49"
+      "scraped_at": "2025-12-15 15:00"
     },
     {
       "coin": "Dogecoin",
       "symbol": "DOGE",
       "coin_id": "dogecoin",
-      "current_price": 0.136887,
+      "current_price": 0.136799,
       "status": "alert",
       "message": "Significant price movement detected (3 movement(s))",
       "movements": [
         {
           "direction": "UP",
-          "change_percent": 5.43,
+          "change_percent": 5.91,
           "from_price": 0.14,
           "to_price": 0.15,
           "timestamp": "2025-12-08T03:00:00Z",
@@ -552,7 +552,325 @@
       "total_positive": 1,
       "total_negative": 1,
       "total_neutral": 4,
-      "scraped_at": "2025-12-15 12:49"
+      "scraped_at": "2025-12-15 15:00"
+    },
+    {
+      "coin": "Cardano",
+      "symbol": "ADA",
+      "coin_id": "cardano",
+      "current_price": 0.403053,
+      "status": "alert",
+      "message": "Significant price movement detected (4 movement(s))",
+      "movements": [
+        {
+          "direction": "UP",
+          "change_percent": 8.49,
+          "from_price": 0.43,
+          "to_price": 0.47,
+          "timestamp": "2025-12-08T03:00:00Z",
+          "alert_type": "SURGE",
+          "news_count": 2,
+          "news_positive": 1,
+          "news_negative": 1,
+          "news_neutral": 0,
+          "related_news": [
+            {
+              "title": "Cardano Temporarily Splits Into Two Chains After Attacker Uses AI-Generated Script to Exploit a Known Bug",
+              "url": "https://www.coindesk.com/markets/2025/11/23/cardano-temporarily-splits-into-two-chains-after-attacker-uses-ai-generated-script-to-exploit-a-known-bug",
+              "sentiment": "NEGATIVE",
+              "published_at": "2025-11-23T15:30:00Z"
+            },
+            {
+              "title": "Cardano’s Biggest Players Unite Behind 70M ADA Push to Spark On-Chain Growth",
+              "url": "https://www.coindesk.com/markets/2025/12/03/cardano-s-biggest-players-unite-behind-70m-ada-push-to-spark-on-chain-growth",
+              "sentiment": "POSITIVE",
+              "published_at": "2025-12-03T17:53:20Z"
+            }
+          ]
+        },
+        {
+          "direction": "DOWN",
+          "change_percent": -5.94,
+          "from_price": 0.47,
+          "to_price": 0.44,
+          "timestamp": "2025-12-09T03:00:00Z",
+          "alert_type": "DROP",
+          "news_count": 2,
+          "news_positive": 1,
+          "news_negative": 1,
+          "news_neutral": 0,
+          "related_news": [
+            {
+              "title": "Cardano Temporarily Splits Into Two Chains After Attacker Uses AI-Generated Script to Exploit a Known Bug",
+              "url": "https://www.coindesk.com/markets/2025/11/23/cardano-temporarily-splits-into-two-chains-after-attacker-uses-ai-generated-script-to-exploit-a-known-bug",
+              "sentiment": "NEGATIVE",
+              "published_at": "2025-11-23T15:30:00Z"
+            },
+            {
+              "title": "Cardano’s Biggest Players Unite Behind 70M ADA Push to Spark On-Chain Growth",
+              "url": "https://www.coindesk.com/markets/2025/12/03/cardano-s-biggest-players-unite-behind-70m-ada-push-to-spark-on-chain-growth",
+              "sentiment": "POSITIVE",
+              "published_at": "2025-12-03T17:53:20Z"
+            }
+          ]
+        },
+        {
+          "direction": "DOWN",
+          "change_percent": -5.17,
+          "from_price": 0.44,
+          "to_price": 0.42,
+          "timestamp": "2025-12-11T03:00:00Z",
+          "alert_type": "DROP",
+          "news_count": 2,
+          "news_positive": 1,
+          "news_negative": 1,
+          "news_neutral": 0,
+          "related_news": [
+            {
+              "title": "Cardano Temporarily Splits Into Two Chains After Attacker Uses AI-Generated Script to Exploit a Known Bug",
+              "url": "https://www.coindesk.com/markets/2025/11/23/cardano-temporarily-splits-into-two-chains-after-attacker-uses-ai-generated-script-to-exploit-a-known-bug",
+              "sentiment": "NEGATIVE",
+              "published_at": "2025-11-23T15:30:00Z"
+            },
+            {
+              "title": "Cardano’s Biggest Players Unite Behind 70M ADA Push to Spark On-Chain Growth",
+              "url": "https://www.coindesk.com/markets/2025/12/03/cardano-s-biggest-players-unite-behind-70m-ada-push-to-spark-on-chain-growth",
+              "sentiment": "POSITIVE",
+              "published_at": "2025-12-03T17:53:20Z"
+            }
+          ]
+        },
+        {
+          "direction": "DOWN",
+          "change_percent": -5.18,
+          "from_price": 0.42,
+          "to_price": 0.4,
+          "timestamp": "2025-12-11T03:00:00Z",
+          "alert_type": "DROP",
+          "news_count": 2,
+          "news_positive": 2,
+          "news_negative": 0,
+          "news_neutral": 0,
+          "related_news": [
+            {
+              "title": "Cardano’s Biggest Players Unite Behind 70M ADA Push to Spark On-Chain Growth",
+              "url": "https://www.coindesk.com/markets/2025/12/03/cardano-s-biggest-players-unite-behind-70m-ada-push-to-spark-on-chain-growth",
+              "sentiment": "POSITIVE",
+              "published_at": "2025-12-03T17:53:20Z"
+            },
+            {
+              "title": "Cardano Ecosystem Gets a Privacy Boost as Midnight’s NIGHT Goes Live",
+              "url": "https://www.coindesk.com/markets/2025/12/11/cardano-ecosystem-gets-a-privacy-boost-as-midnight-s-night-goes-live",
+              "sentiment": "POSITIVE",
+              "published_at": "2025-12-11T16:41:17Z"
+            }
+          ]
+        }
+      ],
+      "total_news": 8,
+      "total_positive": 5,
+      "total_negative": 3,
+      "total_neutral": 0,
+      "scraped_at": "2025-12-15 15:00"
+    },
+    {
+      "coin": "Figure Heloc",
+      "symbol": "FIGR_HELOC",
+      "coin_id": "figure-heloc",
+      "current_price": 1.0,
+      "status": "normal",
+      "message": "Price movement within normal range (< +/-0.05%)",
+      "movements": [],
+      "total_news": 0,
+      "scraped_at": "2025-12-15 15:00"
+    },
+    {
+      "coin": "WhiteBIT Coin",
+      "symbol": "WBT",
+      "coin_id": "whitebit",
+      "current_price": 60.15,
+      "status": "alert",
+      "message": "Significant price movement detected (2 movement(s))",
+      "movements": [
+        {
+          "direction": "UP",
+          "change_percent": 5.1,
+          "from_price": 60.6,
+          "to_price": 63.69,
+          "timestamp": "2025-12-09T03:00:00Z",
+          "alert_type": "SURGE",
+          "news_count": 2,
+          "news_positive": 1,
+          "news_negative": 1,
+          "news_neutral": 0,
+          "related_news": [
+            {
+              "title": "Crypto Exchange WhiteBITs Token Jumps 30% Over Juventus Partnership",
+              "url": "https://www.coindesk.com/markets/2025/06/16/crypto-exchange-whitebits-token-jumps-30-over-juventus-partnership",
+              "sentiment": "POSITIVE",
+              "published_at": "2025-06-16T17:24:52Z"
+            },
+            {
+              "title": "Social Engineering Scams Top Crypto Threats in 2025: WhiteBit",
+              "url": "https://www.coindesk.com/web3/2025/10/30/social-engineering-scams-top-crypto-threats-in-2025-whitebit",
+              "sentiment": "NEGATIVE",
+              "published_at": "2025-10-30T18:54:59Z"
+            }
+          ]
+        },
+        {
+          "direction": "DOWN",
+          "change_percent": -5.27,
+          "from_price": 63.69,
+          "to_price": 60.33,
+          "timestamp": "2025-12-10T03:00:00Z",
+          "alert_type": "DROP",
+          "news_count": 2,
+          "news_positive": 1,
+          "news_negative": 1,
+          "news_neutral": 0,
+          "related_news": [
+            {
+              "title": "Crypto Exchange WhiteBITs Token Jumps 30% Over Juventus Partnership",
+              "url": "https://www.coindesk.com/markets/2025/06/16/crypto-exchange-whitebits-token-jumps-30-over-juventus-partnership",
+              "sentiment": "POSITIVE",
+              "published_at": "2025-06-16T17:24:52Z"
+            },
+            {
+              "title": "Social Engineering Scams Top Crypto Threats in 2025: WhiteBit",
+              "url": "https://www.coindesk.com/web3/2025/10/30/social-engineering-scams-top-crypto-threats-in-2025-whitebit",
+              "sentiment": "NEGATIVE",
+              "published_at": "2025-10-30T18:54:59Z"
+            }
+          ]
+        }
+      ],
+      "total_news": 4,
+      "total_positive": 2,
+      "total_negative": 2,
+      "total_neutral": 0,
+      "scraped_at": "2025-12-15 15:00"
+    },
+    {
+      "coin": "Wrapped stETH",
+      "symbol": "WSTETH",
+      "coin_id": "wrapped-steth",
+      "current_price": 3855.74,
+      "status": "alert",
+      "message": "Significant price movement detected (3 movement(s))",
+      "movements": [
+        {
+          "direction": "UP",
+          "change_percent": 7.1,
+          "from_price": 3836.46,
+          "to_price": 4108.66,
+          "timestamp": "2025-12-08T03:00:00Z",
+          "alert_type": "SURGE",
+          "news_count": 0,
+          "news_positive": 0,
+          "news_negative": 0,
+          "news_neutral": 0,
+          "related_news": []
+        },
+        {
+          "direction": "DOWN",
+          "change_percent": -5.14,
+          "from_price": 4108.66,
+          "to_price": 3897.31,
+          "timestamp": "2025-12-09T03:00:00Z",
+          "alert_type": "DROP",
+          "news_count": 0,
+          "news_positive": 0,
+          "news_negative": 0,
+          "news_neutral": 0,
+          "related_news": []
+        },
+        {
+          "direction": "DOWN",
+          "change_percent": -5.53,
+          "from_price": 3974.41,
+          "to_price": 3754.53,
+          "timestamp": "2025-12-11T03:00:00Z",
+          "alert_type": "DROP",
+          "news_count": 0,
+          "news_positive": 0,
+          "news_negative": 0,
+          "news_neutral": 0,
+          "related_news": []
+        }
+      ],
+      "total_news": 0,
+      "total_positive": 0,
+      "total_negative": 0,
+      "total_neutral": 0,
+      "scraped_at": "2025-12-15 15:00"
+    },
+    {
+      "coin": "Bitcoin Cash",
+      "symbol": "BCH",
+      "coin_id": "bitcoin-cash",
+      "current_price": 564.52,
+      "status": "alert",
+      "message": "Significant price movement detected (2 movement(s))",
+      "movements": [
+        {
+          "direction": "DOWN",
+          "change_percent": -5.58,
+          "from_price": 594.59,
+          "to_price": 561.42,
+          "timestamp": "2025-12-08T03:00:00Z",
+          "alert_type": "DROP",
+          "news_count": 2,
+          "news_positive": 1,
+          "news_negative": 1,
+          "news_neutral": 0,
+          "related_news": [
+            {
+              "title": "Coinbase to Add 24/7 Trading for SHIB, Bitcoin Cash, Dogecoin, and Others",
+              "url": "https://www.coindesk.com/markets/2025/11/23/coinbase-derivatives-to-add-24-7-trading-for-shib-bitcoin-cash-dogecoin-and-others",
+              "sentiment": "POSITIVE",
+              "published_at": "2025-11-22T21:47:15Z"
+            },
+            {
+              "title": "CoinDesk 20 Performance Update: Only Bitcoin Cash (BCH) Gains, Up 2.8%",
+              "url": "https://www.coindesk.com/coindesk-indices/2025/11/26/coindesk-20-performance-update-only-bitcoin-cash-bch-gains-up-2-8",
+              "sentiment": "NEGATIVE",
+              "published_at": "2025-11-26T17:19:00Z"
+            }
+          ]
+        },
+        {
+          "direction": "UP",
+          "change_percent": 5.02,
+          "from_price": 555.14,
+          "to_price": 582.99,
+          "timestamp": "2025-12-11T03:00:00Z",
+          "alert_type": "SURGE",
+          "news_count": 2,
+          "news_positive": 1,
+          "news_negative": 1,
+          "news_neutral": 0,
+          "related_news": [
+            {
+              "title": "Coinbase to Add 24/7 Trading for SHIB, Bitcoin Cash, Dogecoin, and Others",
+              "url": "https://www.coindesk.com/markets/2025/11/23/coinbase-derivatives-to-add-24-7-trading-for-shib-bitcoin-cash-dogecoin-and-others",
+              "sentiment": "POSITIVE",
+              "published_at": "2025-11-22T21:47:15Z"
+            },
+            {
+              "title": "CoinDesk 20 Performance Update: Only Bitcoin Cash (BCH) Gains, Up 2.8%",
+              "url": "https://www.coindesk.com/coindesk-indices/2025/11/26/coindesk-20-performance-update-only-bitcoin-cash-bch-gains-up-2-8",
+              "sentiment": "NEGATIVE",
+              "published_at": "2025-11-26T17:19:00Z"
+            }
+          ]
+        }
+      ],
+      "total_news": 4,
+      "total_positive": 2,
+      "total_negative": 2,
+      "total_neutral": 0,
+      "scraped_at": "2025-12-15 15:00"
     }
   ]
 }

@@ -4,46 +4,91 @@ from datetime import datetime
 from pathlib import Path
 
 
+def get_project_root() -> Path:
+    """Get project root directory (parent of scr/)"""
+    return Path(__file__).parent.parent.parent
+
+
 def save_digest_markdown(price_moving: pd.DataFrame, news: pd.DataFrame, filename='digest.md') -> None:
-    reports_dir = Path('reports')
+    """
+    Creates Markdown digest report
+
+    Args:
+        price_moving: DataFrame with price movements
+        news: DataFrame with news articles
+        filename: output filename (default: 'digest.md')
+    """
+    # Get project root and create reports directory there
+    project_root = get_project_root()
+    reports_dir = project_root / 'reports'
     reports_dir.mkdir(exist_ok=True)
+
     file_md = reports_dir / filename
-    df_merged = pd.merge(
-        price_moving,
-        news,
-        on=['id', 'pct_change'],
-        how='left'
-    )
+
+    # Check if there are any price movements
+    if len(price_moving) == 0:
+        with open(file_md, 'w', encoding='utf-8') as f:
+            f.write("# Crypto Price Movement Digest\n\n")
+            f.write(f"**Generated:** {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n\n")
+            f.write("---\n\n")
+            f.write("## No Significant Price Movements Detected\n\n")
+            f.write("All monitored coins remained within normal price range during the analysis period.\n")
+        print(f"Digest saved to {file_md}")
+        return
+
+    # Merge price and news data only if news DataFrame is not empty and has required columns
+    if len(news) > 0 and 'id' in news.columns and 'pct_change' in news.columns:
+        df_merged = pd.merge(
+            price_moving,
+            news,
+            on=['id', 'pct_change'],
+            how='left'
+        )
+    else:
+        # If no news data, use price_moving as is and add empty news columns
+        df_merged = price_moving.copy()
+        df_merged['title'] = None
+        df_merged['sentiment'] = None
+        df_merged['subtitle'] = None
+        df_merged['url'] = None
+        df_merged['date_s'] = None
+
     with open(file_md, 'w', encoding='utf-8') as f:
         f.write("# Crypto Price Movement Digest\n\n")
         f.write(f"**Generated:** {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n\n")
         f.write("---\n\n")
+
         for coin_id in df_merged['id'].unique():
             coin_data = df_merged[df_merged['id'] == coin_id]
             f.write(f"## {coin_id.upper()}\n\n")
+
             for pct_change in coin_data['pct_change'].unique():
                 movement_data = coin_data[coin_data['pct_change'] == pct_change]
                 first_row = movement_data.iloc[0]
+
                 f.write(f"### |{first_row['direction']}|: {pct_change:+.2f}%\n\n")
+
                 date_str = datetime.fromtimestamp(first_row['day'] / 1000).strftime('%d.%m.%Y %H:%M')
                 f.write(f"**Date:** {date_str}  \n")
                 f.write(f"**Price Change:** ${first_row['from_price']:,.2f} → ${first_row['to_price']:,.2f}\n\n")
 
-                if pd.notna(first_row['title']):
+                # Check if title column exists and has data
+                if 'title' in first_row and pd.notna(first_row['title']):
                     f.write("#### Related News:\n\n")
-                    for _, news in movement_data.iterrows():
-                        if pd.notna(news['title']):
-                            news_date = datetime.fromtimestamp(news['date_s']).strftime('%d.%m.%Y')
-                            f.write(f"**[{news['sentiment']}]** {news['title']}\n")
+                    for _, news_item in movement_data.iterrows():
+                        if pd.notna(news_item['title']):
+                            news_date = datetime.fromtimestamp(news_item['date_s']).strftime('%d.%m.%Y')
+                            f.write(f"**[{news_item['sentiment']}]** {news_item['title']}\n")
                             f.write(f"   - *Published:* {news_date}\n")
-                            if pd.notna(news['subtitle']):
-                                f.write(f"   - *Subtitle:* {news['subtitle']}\n")
-                            f.write(f"   - [Read more]({news['url']})\n\n")
+                            if pd.notna(news_item['subtitle']):
+                                f.write(f"   - *Subtitle:* {news_item['subtitle']}\n")
+                            f.write(f"   - [Read more]({news_item['url']})\n\n")
                 else:
                     f.write("#### No news found for this period\n\n")
 
-                    f.write("---\n\n")
-    print(f" Digest saved to {filename}")
+                f.write("---\n\n")
+
+    print(f"Digest saved to {file_md}")
 
 
 def create_comprehensive_json_report(df_coins: pd.DataFrame, df_price: pd.DataFrame, df_news: pd.DataFrame,
@@ -55,15 +100,16 @@ def create_comprehensive_json_report(df_coins: pd.DataFrame, df_price: pd.DataFr
         df_coins: DataFrame with all monitored coins (from get_coins)
         df_price: DataFrame with significant price changes (from find_price_changes)
         df_news: DataFrame with news articles
+        output_dir: directory name for saving report (relative to project root)
         threshold: threshold for "significant" price change (default 5%)
-        output_dir: directory for saving report
 
     Returns:
         dict: json_report dictionary
     """
 
-    # Create output directory
-    output_path = Path(output_dir)
+    # Get project root and create output directory there
+    project_root = get_project_root()
+    output_path = project_root / output_dir
     output_path.mkdir(parents=True, exist_ok=True)
 
     timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')

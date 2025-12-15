@@ -1,6 +1,6 @@
 # Crypto Price Movement Digest
 
-**Generated:** 2025-12-15 12:50:51
+**Generated:** 2025-12-15 15:02:54
 
 ---
 
@@ -23,6 +23,126 @@
    - *Subtitle:* Bitcoin dipped below $90,000 on Sunday as low liquidity, altcoin weakness and imminent U.S. and global data releases kept traders cautious.
    - [Read more](https://www.coindesk.com/markets/2025/12/14/bitcoin-dips-below-usd90k-amid-fading-risk-appetite-ahead-of-key-macro-events)
 
+---
+
+## BITCOIN-CASH
+
+### |DOWN|: -5.58%
+
+**Date:** 08.12.2025 03:00  
+**Price Change:** $594.59 → $561.42
+
+#### Related News:
+
+**[POSITIVE]** Coinbase to Add 24/7 Trading for SHIB, Bitcoin Cash, Dogecoin, and Others
+   - *Published:* 22.11.2025
+   - *Subtitle:* The exchange plans to introduce U.S. perpetual-style futures for altcoins, settling on a five-year expiry.
+   - [Read more](https://www.coindesk.com/markets/2025/11/23/coinbase-derivatives-to-add-24-7-trading-for-shib-bitcoin-cash-dogecoin-and-others)
+
+**[NEGATIVE]** CoinDesk 20 Performance Update: Only Bitcoin Cash (BCH) Gains, Up 2.8%
+   - *Published:* 26.11.2025
+   - *Subtitle:* Internet Computer (ICP) fell 3.4% and Litecoin (LTC) dropped 1.7%, leading the index lower. .
+   - [Read more](https://www.coindesk.com/coindesk-indices/2025/11/26/coindesk-20-performance-update-only-bitcoin-cash-bch-gains-up-2-8)
+
+---
+
+### |UP|: +5.02%
+
+**Date:** 11.12.2025 03:00  
+**Price Change:** $555.14 → $582.99
+
+#### Related News:
+
+**[POSITIVE]** Coinbase to Add 24/7 Trading for SHIB, Bitcoin Cash, Dogecoin, and Others
+   - *Published:* 22.11.2025
+   - *Subtitle:* The exchange plans to introduce U.S. perpetual-style futures for altcoins, settling on a five-year expiry.
+   - [Read more](https://www.coindesk.com/markets/2025/11/23/coinbase-derivatives-to-add-24-7-trading-for-shib-bitcoin-cash-dogecoin-and-others)
+
+**[NEGATIVE]** CoinDesk 20 Performance Update: Only Bitcoin Cash (BCH) Gains, Up 2.8%
+   - *Published:* 26.11.2025
+   - *Subtitle:* Internet Computer (ICP) fell 3.4% and Litecoin (LTC) dropped 1.7%, leading the index lower. .
+   - [Read more](https://www.coindesk.com/coindesk-indices/2025/11/26/coindesk-20-performance-update-only-bitcoin-cash-bch-gains-up-2-8)
+
+---
+
+## CARDANO
+
+### |DOWN|: -5.94%
+
+**Date:** 09.12.2025 03:00  
+**Price Change:** $0.47 → $0.44
+
+#### Related News:
+
+**[NEGATIVE]** Cardano Temporarily Splits Into Two Chains After Attacker Uses AI-Generated Script to Exploit a Known Bug
+   - *Published:* 23.11.2025
+   - *Subtitle:* The divergence emerged when newer nodes accepted a malformed transaction that older nodes rejected.
+   - [Read more](https://www.coindesk.com/markets/2025/11/23/cardano-temporarily-splits-into-two-chains-after-attacker-uses-ai-generated-script-to-exploit-a-known-bug)
+
+**[POSITIVE]** Cardano’s Biggest Players Unite Behind 70M ADA Push to Spark On-Chain Growth
+   - *Published:* 03.12.2025
+   - *Subtitle:* Funds will be allocated to developing stablecoins, credible oracle feeds, cross-chain bridges, custody integrations, and analytics tooling, among other enhancements.
+   - [Read more](https://www.coindesk.com/markets/2025/12/03/cardano-s-biggest-players-unite-behind-70m-ada-push-to-spark-on-chain-growth)
+
+---
+
+### |DOWN|: -5.18%
+
+**Date:** 11.12.2025 03:00  
+**Price Change:** $0.42 → $0.40
+
+#### Related News:
+
+**[POSITIVE]** Cardano’s Biggest Players Unite Behind 70M ADA Push to Spark On-Chain Growth
+   - *Published:* 03.12.2025
+   - *Subtitle:* Funds will be allocated to developing stablecoins, credible oracle feeds, cross-chain bridges, custody integrations, and analytics tooling, among other enhancements.
+   - [Read more](https://www.coindesk.com/markets/2025/12/03/cardano-s-biggest-players-unite-behind-70m-ada-push-to-spark-on-chain-growth)
+
+**[POSITIVE]** Cardano Ecosystem Gets a Privacy Boost as Midnight’s NIGHT Goes Live
+   - *Published:* 11.12.2025
+   - *Subtitle:* The network uses a dual-state architecture that separates public and private data while allowing controlled disclosure to auditors, institutions or counterparties.
+   - [Read more](https://www.coindesk.com/markets/2025/12/11/cardano-ecosystem-gets-a-privacy-boost-as-midnight-s-night-goes-live)
+
+---
+
+### |DOWN|: -5.17%
+
+**Date:** 11.12.2025 03:00  
+**Price Change:** $0.44 → $0.42
+
+#### Related News:
+
+**[NEGATIVE]** Cardano Temporarily Splits Into Two Chains After Attacker Uses AI-Generated Script to Exploit a Known Bug
+   - *Published:* 23.11.2025
+   - *Subtitle:* The divergence emerged when newer nodes accepted a malformed transaction that older nodes rejected.
+   - [Read more](https://www.coindesk.com/markets/2025/11/23/cardano-temporarily-splits-into-two-chains-after-attacker-uses-ai-generated-script-to-exploit-a-known-bug)
+
+**[POSITIVE]** Cardano’s Biggest Players Unite Behind 70M ADA Push to Spark On-Chain Growth
+   - *Published:* 03.12.2025
+   - *Subtitle:* Funds will be allocated to developing stablecoins, credible oracle feeds, cross-chain bridges, custody integrations, and analytics tooling, among other enhancements.
+   - [Read more](https://www.coindesk.com/markets/2025/12/03/cardano-s-biggest-players-unite-behind-70m-ada-push-to-spark-on-chain-growth)
+
+---
+
+### |UP|: +8.49%
+
+**Date:** 08.12.2025 03:00  
+**Price Change:** $0.43 → $0.47
+
+#### Related News:
+
+**[NEGATIVE]** Cardano Temporarily Splits Into Two Chains After Attacker Uses AI-Generated Script to Exploit a Known Bug
+   - *Published:* 23.11.2025
+   - *Subtitle:* The divergence emerged when newer nodes accepted a malformed transaction that older nodes rejected.
+   - [Read more](https://www.coindesk.com/markets/2025/11/23/cardano-temporarily-splits-into-two-chains-after-attacker-uses-ai-generated-script-to-exploit-a-known-bug)
+
+**[POSITIVE]** Cardano’s Biggest Players Unite Behind 70M ADA Push to Spark On-Chain Growth
+   - *Published:* 03.12.2025
+   - *Subtitle:* Funds will be allocated to developing stablecoins, credible oracle feeds, cross-chain bridges, custody integrations, and analytics tooling, among other enhancements.
+   - [Read more](https://www.coindesk.com/markets/2025/12/03/cardano-s-biggest-players-unite-behind-70m-ada-push-to-spark-on-chain-growth)
+
+---
+
 ## DOGECOIN
 
 ### |DOWN|: -5.40%
@@ -42,6 +162,8 @@
    - *Subtitle:* The breakout now sets up a clean continuation zone—provided bulls defend the mid-range pivot they just reclaimed.
    - [Read more](https://www.coindesk.com/markets/2025/12/10/dogecoin-surges-as-ether-zooms-8-sparking-bullish-reversal-for-memecoins)
 
+---
+
 ### |DOWN|: -5.04%
 
 **Date:** 11.12.2025 03:00  
@@ -59,7 +181,9 @@
    - *Subtitle:* Despite elevated trading activity, Dogecoin faces resistance near $0.1425, and its future movement is likely dependent on broader market sentiment.
    - [Read more](https://www.coindesk.com/markets/2025/12/12/dogecoin-hovers-near-key-support-as-fed-easing-fails-to-spark-risk-rally)
 
-### |UP|: +5.43%
+---
+
+### |UP|: +5.91%
 
 **Date:** 08.12.2025 03:00  
 **Price Change:** $0.14 → $0.15
@@ -75,6 +199,8 @@
    - *Published:* 09.12.2025
    - *Subtitle:* Rising active addresses and tightening volatility indicate an impending directional move, with $0.16 as a critical breakout threshold.
    - [Read more](https://www.coindesk.com/markets/2025/12/09/dogecoin-holds-usd0-14-floor-as-network-activity-hits-3-month-high)
+
+---
 
 ## ETHEREUM
 
@@ -95,6 +221,8 @@
    - *Subtitle:* The bridge uses Chainlinks CCIP to ensure consistent behavior across chains, mirroring the behavior of underlying assets.
    - [Read more](https://www.coindesk.com/web3/2025/12/12/backed-chainlink-launch-xbridge-to-move-tokenized-stocks-between-solana-and-ethereum)
 
+---
+
 ### |DOWN|: -5.26%
 
 **Date:** 09.12.2025 03:00  
@@ -112,10 +240,12 @@
    - *Subtitle:* SEC-registered firms can sell shares directly on blockchain rails to investors, raising funds in stablecoins.
    - [Read more](https://www.coindesk.com/business/2025/12/10/superstate-rolls-out-direct-stock-issuance-for-public-companies-on-ethereum-solana)
 
-### |UP|: +6.63%
+---
+
+### |UP|: +7.19%
 
 **Date:** 08.12.2025 03:00  
-**Price Change:** $3,156.81 → $3,366.12
+**Price Change:** $3,140.35 → $3,366.12
 
 #### Related News:
 
@@ -129,31 +259,35 @@
    - *Subtitle:* Early PeerDAS performance is proof that the Ethereum Foundation can now ship complex networking improvements at scale.
    - [Read more](https://www.coindesk.com/markets/2025/12/09/ethereum-s-p2p-layer-is-improving-just-as-institutional-eth-buys-pick-up)
 
+---
+
 ## RIPPLE
 
-### |DOWN|: -5.19%
+### |DOWN|: -5.04%
 
 **Date:** 08.12.2025 03:00  
-**Price Change:** $2.10 → $1.99
+**Price Change:** $2.09 → $1.99
 
 #### Related News:
 
-**[NEUTRAL]** Wall Street Saw Ripple as 90% XRP — Offered $500M, but With Safety Net: Bloomberg
-   - *Published:* 08.12.2025
-   - *Subtitle:* Multiple investors concluded that at least 90% of Ripple’s net asset value was tied to XRP, the closely-linked token that maintains distance from the company legally.
-   - [Read more](https://www.coindesk.com/markets/2025/12/08/wall-street-saw-ripple-as-90-xrp-then-offered-usd500m-with-a-safety-net)
+**[POSITIVE]** Ripple Payments Lands First European Bank Client in AMINA
+   - *Published:* 12.12.2025
+   - *Subtitle:* AMINA is said to be able to process cross-border flows involving fiat currencies and stablecoins, including Ripple’s own RLUSD.
+   - [Read more](https://www.coindesk.com/markets/2025/12/12/ripple-payments-lands-first-european-bank-client-in-amina)
 
-**[NEGATIVE]** XRP Sell Pressure Emerges as Ripple Linked Token Fails to Sustain $2.12 Break
-   - *Published:* 10.12.2025
-   - *Subtitle:* Despite briefly reaching $2.17, XRP failed to maintain momentum, suggesting large holders may be unwinding positions rather than accumulating.
-   - [Read more](https://www.coindesk.com/markets/2025/12/10/xrp-sell-pressure-emerges-as-ripple-linked-token-fails-to-sustain-usd2-12-break)
+**[POSITIVE]** Five Crypto Firms Win Initial Approvals as Trust Banks, Including Ripple, Circle, BitGo
+   - *Published:* 12.12.2025
+   - *Subtitle:* The firms have obtained conditional approval from the Office of the Comptroller of the Currency to convert into national trust banks.
+   - [Read more](https://www.coindesk.com/policy/2025/12/12/five-crypto-firms-step-closer-to-become-a-bank-including-ripple-circle-fidelity)
+
+---
 
 ## SOLANA
 
-### |DOWN|: -5.24%
+### |DOWN|: -5.53%
 
 **Date:** 08.12.2025 03:00  
-**Price Change:** $138.01 → $130.78
+**Price Change:** $138.43 → $130.78
 
 #### Related News:
 
@@ -166,6 +300,8 @@
    - *Published:* 11.12.2025
    - *Subtitle:* The Himalayan kingdom introduced TER, a Solana-based token backed by physical gold and issued through Gelephu Mindfulness City.
    - [Read more](https://www.coindesk.com/business/2025/12/10/bhutan-debuts-ter-gold-backed-token-on-solana)
+
+---
 
 ### |DOWN|: -5.13%
 
@@ -184,6 +320,8 @@
    - *Subtitle:* The bridge uses Chainlinks CCIP to ensure consistent behavior across chains, mirroring the behavior of underlying assets.
    - [Read more](https://www.coindesk.com/web3/2025/12/12/backed-chainlink-launch-xbridge-to-move-tokenized-stocks-between-solana-and-ethereum)
 
+---
+
 ### |UP|: +5.70%
 
 **Date:** 11.12.2025 03:00  
@@ -200,6 +338,8 @@
    - *Published:* 12.12.2025
    - *Subtitle:* Wrapped XRP will be tradable on Solana, Ethereum and other chains, allowing exposure across DeFi applications without unregulated third-party bridges.
    - [Read more](https://www.coindesk.com/markets/2025/12/12/xrp-lands-on-solana-ethereum-and-others-in-boost-for-ripple-ecosystem)
+
+---
 
 ## STAKED-ETHER
 
@@ -220,6 +360,8 @@
    - *Subtitle:* A new Delaware filing for the iShares Staked Ethereum Trust signals BlackRock’s intent to enter the yield-bearing ether market as issuers wait for SEC clarity on staking.
    - [Read more](https://www.coindesk.com/markets/2025/11/20/blackrock-takes-first-step-toward-a-staked-eth-etf)
 
+---
+
 ### |DOWN|: -5.12%
 
 **Date:** 09.12.2025 03:00  
@@ -237,10 +379,12 @@
    - *Subtitle:* A new Delaware filing for the iShares Staked Ethereum Trust signals BlackRock’s intent to enter the yield-bearing ether market as issuers wait for SEC clarity on staking.
    - [Read more](https://www.coindesk.com/markets/2025/11/20/blackrock-takes-first-step-toward-a-staked-eth-etf)
 
-### |UP|: +6.53%
+---
+
+### |UP|: +7.07%
 
 **Date:** 08.12.2025 03:00  
-**Price Change:** $3,155.64 → $3,361.56
+**Price Change:** $3,139.46 → $3,361.56
 
 #### Related News:
 
@@ -254,9 +398,11 @@
    - *Subtitle:* A new Delaware filing for the iShares Staked Ethereum Trust signals BlackRock’s intent to enter the yield-bearing ether market as issuers wait for SEC clarity on staking.
    - [Read more](https://www.coindesk.com/markets/2025/11/20/blackrock-takes-first-step-toward-a-staked-eth-etf)
 
+---
+
 ## TRON
 
-### |DOWN|: -5.03%
+### |DOWN|: -5.10%
 
 **Date:** 08.12.2025 03:00  
 **Price Change:** $0.29 → $0.27
@@ -272,4 +418,46 @@
    - *Published:* 11.12.2025
    - *Subtitle:* Institutional flows surged 54% above the weekly average, indicating strategic selling rather than retail panic.
    - [Read more](https://www.coindesk.com/markets/2025/12/11/xrp-slides-as-traders-take-bitcoin-profits-with-etf-flows-still-strong)
+
+---
+
+## WHITEBIT
+
+### |DOWN|: -5.27%
+
+**Date:** 10.12.2025 03:00  
+**Price Change:** $63.69 → $60.33
+
+#### Related News:
+
+**[POSITIVE]** Crypto Exchange WhiteBITs Token Jumps 30% Over Juventus Partnership
+   - *Published:* 16.06.2025
+   - *Subtitle:* The exchange became the the teams official cryptocurrency exchange and official sleeve partner.
+   - [Read more](https://www.coindesk.com/markets/2025/06/16/crypto-exchange-whitebits-token-jumps-30-over-juventus-partnership)
+
+**[NEGATIVE]** Social Engineering Scams Top Crypto Threats in 2025: WhiteBit
+   - *Published:* 30.10.2025
+   - *Subtitle:* Technical wallet hacks, including phishing and malware, are the second most common threat, making up 33.7% of incidents.
+   - [Read more](https://www.coindesk.com/web3/2025/10/30/social-engineering-scams-top-crypto-threats-in-2025-whitebit)
+
+---
+
+### |UP|: +5.10%
+
+**Date:** 09.12.2025 03:00  
+**Price Change:** $60.60 → $63.69
+
+#### Related News:
+
+**[POSITIVE]** Crypto Exchange WhiteBITs Token Jumps 30% Over Juventus Partnership
+   - *Published:* 16.06.2025
+   - *Subtitle:* The exchange became the the teams official cryptocurrency exchange and official sleeve partner.
+   - [Read more](https://www.coindesk.com/markets/2025/06/16/crypto-exchange-whitebits-token-jumps-30-over-juventus-partnership)
+
+**[NEGATIVE]** Social Engineering Scams Top Crypto Threats in 2025: WhiteBit
+   - *Published:* 30.10.2025
+   - *Subtitle:* Technical wallet hacks, including phishing and malware, are the second most common threat, making up 33.7% of incidents.
+   - [Read more](https://www.coindesk.com/web3/2025/10/30/social-engineering-scams-top-crypto-threats-in-2025-whitebit)
+
+---
 
