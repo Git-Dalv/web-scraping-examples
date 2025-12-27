@@ -1,0 +1,30 @@
+# config.yaml
+level: 2
+
+browser:
+  type: chromium
+  headless: true
+  slow_mo: 0
+  args:
+    - --no-sandbox
+    - --disable-dev-shm-usage
+
+proxy:
+  enabled: false
+  source: null
+  rotation: per_session
+  validate_proxies: true
+  geo_lookup: true
+
+fingerprint:
+  consistency: auto
+  device_type: desktop
+
+behavior:
+  human_delays: true
+  delay_range: [0.5, 2.0]
+
+retry:
+  enabled: true
+  max_attempts: 3
+  backoff: exponential
