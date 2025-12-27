@@ -36,6 +36,8 @@ reports/
 *.png
 *.jpg
 
+!docs/images/*.png
+
 # Raw data (regenerated)
 raw_jobs.jsonl
 parsed_jobs.jsonl
