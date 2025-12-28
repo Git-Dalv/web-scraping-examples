@@ -204,6 +204,6 @@ beautifulsoup4>=4.12.0
 pandas>=2.0.0
 pyyaml>=6.0
 http-client-core @ git+https://github.com/Git-Dalv/http-client-core.git # [all]
-text-cleaner @ git+https://github.com/Git-Dalv/http-client-core
+text-cleaner @ git+https://github.com/Git-Dalv/text-cleaner
 
 ```

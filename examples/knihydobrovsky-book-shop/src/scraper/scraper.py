@@ -60,6 +60,7 @@ def scrape(path: str):
 
                     result.append(current_data)
                 nav = row_cols_part.find('nav', role='navigatoin')
+                # typo on website
                 next_page = nav.find('a', class_='btn btn-silver btn-icon-after btn-icon-after-pag btn-s btn-change-page ajax')
                 if next_page:
                     url = clean(next_page['href'])
