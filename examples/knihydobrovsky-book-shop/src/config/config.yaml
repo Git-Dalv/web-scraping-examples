@@ -1,0 +1,117 @@
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# HTTP Client Configuration
+# Target: knihydobrovsky.cz (Czech bookstore)
+# Type: Server-side rendered, low protection
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+http_client:
+  base_url: "https://www.knihydobrovsky.cz"
+
+  # ─────────────────────────────────────────
+  # Rate Limiting (respectful scraping)
+  # ─────────────────────────────────────────
+  rate_limit:
+    enabled: true
+    requests_per_second: 0.5      # 1 request per 2 seconds
+    requests_per_minute: 25       # Max 25 requests per minute
+    burst: 2                      # Allow 2 burst requests
+    delay_between_requests: 2.0   # Minimum 2 sec between requests
+    delay_jitter: 1.0             # +/- 1 sec random delay
+
+  # ─────────────────────────────────────────
+  # Timeouts
+  # ─────────────────────────────────────────
+  timeout:
+    connect: 10          # Connection timeout (sec)
+    read: 30             # Read timeout
+    total: 45            # Total request timeout
+
+  # ─────────────────────────────────────────
+  # Retry Strategy
+  # ─────────────────────────────────────────
+  retry:
+    max_attempts: 3
+    backoff_base: 2.0            # Initial backoff delay
+    backoff_factor: 2.0          # Exponential multiplier (2s -> 4s -> 8s)
+    backoff_max: 30.0            # Maximum backoff delay
+    backoff_jitter: true         # Add random jitter
+    respect_retry_after: true    # Honor Retry-After header
+    retry_after_max: 60          # Max wait time from Retry-After
+    retry_on_status: [429, 500, 502, 503, 504]
+
+  # ─────────────────────────────────────────
+  # Connection Pool
+  # ─────────────────────────────────────────
+  pool:
+    connections: 5                # Keepalive connections
+    maxsize: 10                   # Maximum concurrent connections
+    max_redirects: 5              # Follow redirects limit
+
+  # ─────────────────────────────────────────
+  # Security
+  # ─────────────────────────────────────────
+  security:
+    verify_ssl: true
+    allow_redirects: true
+    max_response_size: 5242880    # 5MB (HTML pages are lightweight)
+
+  # ─────────────────────────────────────────
+  # Circuit Breaker
+  # ─────────────────────────────────────────
+  circuit_breaker:
+    enabled: true
+    failure_threshold: 5          # Pause after 5 failures
+    recovery_timeout: 30.0        # 30 sec before retry attempt
+    half_open_max_calls: 2        # Test requests in half-open state
+
+# ─────────────────────────────────────────
+# Headers (browser simulation)
+# ─────────────────────────────────────────
+headers:
+  default:
+    Accept: "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8"
+    Accept-Language: "cs-CZ,cs;q=0.9,en-US;q=0.8,en;q=0.7"
+    Accept-Encoding: "gzip, deflate, br"
+    DNT: "1"
+    Connection: "keep-alive"
+    Upgrade-Insecure-Requests: "1"
+    Sec-Fetch-Dest: "document"
+    Sec-Fetch-Mode: "navigate"
+    Sec-Fetch-Site: "none"
+    Sec-Fetch-User: "?1"
+    Cache-Control: "max-age=0"
+
+  # ─────────────────────────────────────────
+  # User-Agent Rotation
+  # ─────────────────────────────────────────
+  user_agent_rotation:
+    enabled: true
+    strategy: "random"
+
+  user_agents:
+    # Chrome (Windows)
+    - "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+    - "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+    - "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
+    # Firefox (Windows)
+    - "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:121.0) Gecko/20100101 Firefox/121.0"
+    - "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:122.0) Gecko/20100101 Firefox/122.0"
+    # Chrome (macOS)
+    - "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+    - "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+    # Safari (macOS)
+    - "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.1 Safari/605.1.15"
+    # Firefox (Linux)
+    - "Mozilla/5.0 (X11; Linux x86_64; rv:121.0) Gecko/20100101 Firefox/121.0"
+    - "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:122.0) Gecko/20100101 Firefox/122.0"
+
+  # ─────────────────────────────────────────
+  # Logging
+  # ─────────────────────────────────────────
+  logging:
+    level: "INFO"
+    format: "text"
+    enable_console: true
+    log_request_body: false
+    log_response_body: false
+    log_file: null
