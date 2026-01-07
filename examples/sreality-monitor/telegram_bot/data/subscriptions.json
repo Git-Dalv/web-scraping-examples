@@ -1,0 +1,14 @@
+{
+  "394818186": {
+    "new_listings": {
+      "enabled": true,
+      "filters": {
+        "region_id": "10"
+      }
+    },
+    "price_drop": {
+      "enabled": true,
+      "min_percent": 20
+    }
+  }
+}
