@@ -1,0 +1,37 @@
+http_client:
+
+  base_url: "https://www.sreality.cz"
+
+  timeout:
+    connect: 5
+    read: 45
+    total: 60
+
+  retry:
+    max_attempts: 3
+    backoff_base: 3
+    backoff_factor: 2.0
+    backoff_max: 60.0
+    backoff_jitter: true
+    respect_retry_after: true
+
+  security:
+    verify_ssl: false # исправить на true в продакшн
+    max_response_size: 104857600
+
+
+  circuit_breaker:
+    enabled: true
+    failure_threshold: 10
+    recovery_timeout: 60.0
+
+  logging:
+    level: "WARNING"
+    format: "json"
+    enable_console: true
+    enable_file: true
+    file_path: "./logs"
+
+    rate_limit:
+      max_requests: 30
+      time_window: 60.0

@@ -1,0 +1,545 @@
+{
+  "generated_at": "2026-01-06T21:41:05.157933",
+  "summary": {
+    "total_active": 93390,
+    "total_closed": 0,
+    "avg_price": 4400841,
+    "avg_price_m2": 31571,
+    "min_price": 1,
+    "max_price": 330000000,
+    "total_price_changes": 0,
+    "total_agencies": 4574
+  },
+  "price_by_region": [
+    {
+      "region": "Prague",
+      "region_id": 10,
+      "count": 12775,
+      "avg_price_m2": 61072,
+      "avg_price": 5966317,
+      "min_price": 1,
+      "max_price": 175000000
+    },
+    {
+      "region": "Central Bohemian region",
+      "region_id": 11,
+      "count": 12087,
+      "avg_price_m2": 37596,
+      "avg_price": 6430638,
+      "min_price": 1,
+      "max_price": 250000000
+    },
+    {
+      "region": "South Moravian region",
+      "region_id": 14,
+      "count": 9823,
+      "avg_price_m2": 32827,
+      "avg_price": 3795537,
+      "min_price": 1,
+      "max_price": 150000000
+    },
+    {
+      "region": "Liberec region",
+      "region_id": 5,
+      "count": 3772,
+      "avg_price_m2": 29184,
+      "avg_price": 4675285,
+      "min_price": 15,
+      "max_price": 78400000
+    },
+    {
+      "region": "Hradec Králové region",
+      "region_id": 6,
+      "count": 3713,
+      "avg_price_m2": 29128,
+      "avg_price": 4403637,
+      "min_price": 13,
+      "max_price": 95000000
+    },
+    {
+      "region": "Karlovy Vary region",
+      "region_id": 3,
+      "count": 2843,
+      "avg_price_m2": 28864,
+      "avg_price": 4739826,
+      "min_price": 10,
+      "max_price": 165000000
+    },
+    {
+      "region": "South Bohemia region",
+      "region_id": 1,
+      "count": 5442,
+      "avg_price_m2": 25585,
+      "avg_price": 4430680,
+      "min_price": 10,
+      "max_price": 143388000
+    },
+    {
+      "region": "Pilsen region",
+      "region_id": 2,
+      "count": 4718,
+      "avg_price_m2": 24560,
+      "avg_price": 3875474,
+      "min_price": 1,
+      "max_price": 170000000
+    },
+    {
+      "region": "Olomouc region",
+      "region_id": 8,
+      "count": 4353,
+      "avg_price_m2": 22759,
+      "avg_price": 3114395,
+      "min_price": 25,
+      "max_price": 90000000
+    },
+    {
+      "region": "Pardubice region",
+      "region_id": 7,
+      "count": 3453,
+      "avg_price_m2": 22368,
+      "avg_price": 3621043,
+      "min_price": 18,
+      "max_price": 77250000
+    },
+    {
+      "region": "Vysočina region",
+      "region_id": 13,
+      "count": 2666,
+      "avg_price_m2": 19872,
+      "avg_price": 3253520,
+      "min_price": 25,
+      "max_price": 53000000
+    },
+    {
+      "region": "Moravian-Silesian region",
+      "region_id": 12,
+      "count": 6802,
+      "avg_price_m2": 18795,
+      "avg_price": 3230831,
+      "min_price": 25,
+      "max_price": 190000000
+    },
+    {
+      "region": "Ústí region",
+      "region_id": 4,
+      "count": 6393,
+      "avg_price_m2": 17396,
+      "avg_price": 3326545,
+      "min_price": 1,
+      "max_price": 330000000
+    },
+    {
+      "region": "Zlín region",
+      "region_id": 9,
+      "count": 4371,
+      "avg_price_m2": 14384,
+      "avg_price": 2161555,
+      "min_price": 17.5,
+      "max_price": 105000000
+    }
+  ],
+  "price_by_category": [
+    {
+      "type": "Sale",
+      "category": "Land",
+      "count": 17952,
+      "avg_price": 3004368,
+      "avg_price_m2": 2216
+    },
+    {
+      "type": "Sale",
+      "category": "Houses",
+      "count": 16442,
+      "avg_price": 8738363,
+      "avg_price_m2": 53407
+    },
+    {
+      "type": "Sale",
+      "category": "Apartments",
+      "count": 14236,
+      "avg_price": 7506532,
+      "avg_price_m2": 106387
+    },
+    {
+      "type": "Lease",
+      "category": "Apartments",
+      "count": 11182,
+      "avg_price": 20137,
+      "avg_price_m2": 340
+    },
+    {
+      "type": "Lease",
+      "category": "Commercial",
+      "count": 9848,
+      "avg_price": 26022,
+      "avg_price_m2": 296
+    },
+    {
+      "type": "Shares",
+      "category": "Land",
+      "count": 6504,
+      "avg_price": 158405,
+      "avg_price_m2": 245
+    },
+    {
+      "type": "Sale",
+      "category": "Commercial",
+      "count": 3715,
+      "avg_price": 16050630,
+      "avg_price_m2": 41855
+    },
+    {
+      "type": "Sale",
+      "category": "Other",
+      "count": 1069,
+      "avg_price": 1451036,
+      "avg_price_m2": 38279
+    },
+    {
+      "type": "Lease",
+      "category": "Other",
+      "count": 819,
+      "avg_price": 3425,
+      "avg_price_m2": 157
+    },
+    {
+      "type": "Lease",
+      "category": "Houses",
+      "count": 736,
+      "avg_price": 46573,
+      "avg_price_m2": 263
+    },
+    {
+      "type": "Auction",
+      "category": "Land",
+      "count": 510,
+      "avg_price": 288109,
+      "avg_price_m2": 160
+    },
+    {
+      "type": "Lease",
+      "category": "Land",
+      "count": 362,
+      "avg_price": 18847,
+      "avg_price_m2": 31
+    },
+    {
+      "type": "Shares",
+      "category": "Houses",
+      "count": 187,
+      "avg_price": 1786329,
+      "avg_price_m2": 13760
+    },
+    {
+      "type": "Auction",
+      "category": "Houses",
+      "count": 66,
+      "avg_price": 4526386,
+      "avg_price_m2": 17476
+    },
+    {
+      "type": "Auction",
+      "category": "Apartments",
+      "count": 29,
+      "avg_price": 2720942,
+      "avg_price_m2": 37629
+    },
+    {
+      "type": "Shares",
+      "category": "Commercial",
+      "count": 28,
+      "avg_price": 3852863,
+      "avg_price_m2": 6367
+    },
+    {
+      "type": "Auction",
+      "category": "Commercial",
+      "count": 20,
+      "avg_price": 11160504,
+      "avg_price_m2": 23315
+    },
+    {
+      "type": "Shares",
+      "category": "Apartments",
+      "count": 14,
+      "avg_price": 1337671,
+      "avg_price_m2": 25297
+    },
+    {
+      "type": "Auction",
+      "category": "Other",
+      "count": 9,
+      "avg_price": 7828537,
+      "avg_price_m2": 4117
+    },
+    {
+      "type": "Shares",
+      "category": "Other",
+      "count": 9,
+      "avg_price": 2879653,
+      "avg_price_m2": 27851
+    }
+  ],
+  "price_distribution": {
+    "sale_price": [
+      {
+        "range": "< 1M",
+        "count": 14692
+      },
+      {
+        "range": "1-2M",
+        "count": 4517
+      },
+      {
+        "range": "2-3M",
+        "count": 5005
+      },
+      {
+        "range": "3-5M",
+        "count": 8977
+      },
+      {
+        "range": "5-10M",
+        "count": 14531
+      },
+      {
+        "range": "10-20M",
+        "count": 7866
+      },
+      {
+        "range": "> 20M",
+        "count": 2656
+      }
+    ],
+    "price_per_m2": [
+      {
+        "range": "< 30k",
+        "count": 65459
+      },
+      {
+        "range": "30-50k",
+        "count": 7229
+      },
+      {
+        "range": "50-75k",
+        "count": 6770
+      },
+      {
+        "range": "75-100k",
+        "count": 4999
+      },
+      {
+        "range": "100-150k",
+        "count": 5393
+      },
+      {
+        "range": "150-200k",
+        "count": 2658
+      },
+      {
+        "range": "> 200k",
+        "count": 882
+      }
+    ]
+  },
+  "top_districts": [
+    {
+      "district": "Brno-město",
+      "region": "South Moravian region",
+      "count": 3250,
+      "avg_price_m2": 49390,
+      "avg_price": 4101392
+    },
+    {
+      "district": "Praha 5",
+      "region": "Prague",
+      "count": 2429,
+      "avg_price_m2": 67582,
+      "avg_price": 6805831
+    },
+    {
+      "district": "Praha 4",
+      "region": "Prague",
+      "count": 2143,
+      "avg_price_m2": 59615,
+      "avg_price": 5776573
+    },
+    {
+      "district": "Ostrava-město",
+      "region": "Moravian-Silesian region",
+      "count": 2075,
+      "avg_price_m2": 23832,
+      "avg_price": 3826249
+    },
+    {
+      "district": "Praha-východ",
+      "region": "Central Bohemian region",
+      "count": 1908,
+      "avg_price_m2": 48937,
+      "avg_price": 9317766
+    },
+    {
+      "district": "Olomouc",
+      "region": "Olomouc region",
+      "count": 1651,
+      "avg_price_m2": 27640,
+      "avg_price": 3331288
+    },
+    {
+      "district": "Brno-venkov",
+      "region": "South Moravian region",
+      "count": 1619,
+      "avg_price_m2": 36161,
+      "avg_price": 5089627
+    },
+    {
+      "district": "Praha 9",
+      "region": "Prague",
+      "count": 1538,
+      "avg_price_m2": 68791,
+      "avg_price": 6555582
+    },
+    {
+      "district": "České Budějovice",
+      "region": "South Bohemia region",
+      "count": 1519,
+      "avg_price_m2": 29582,
+      "avg_price": 4668441
+    },
+    {
+      "district": "Hodonín",
+      "region": "South Moravian region",
+      "count": 1431,
+      "avg_price_m2": 13050,
+      "avg_price": 1888075
+    },
+    {
+      "district": "Karviná",
+      "region": "Moravian-Silesian region",
+      "count": 1392,
+      "avg_price_m2": 13473,
+      "avg_price": 2116418
+    },
+    {
+      "district": "Praha-západ",
+      "region": "Central Bohemian region",
+      "count": 1375,
+      "avg_price_m2": 45634,
+      "avg_price": 9556740
+    },
+    {
+      "district": "Karlovy Vary",
+      "region": "Karlovy Vary region",
+      "count": 1371,
+      "avg_price_m2": 36929,
+      "avg_price": 6146532
+    },
+    {
+      "district": "Liberec",
+      "region": "Liberec region",
+      "count": 1328,
+      "avg_price_m2": 30477,
+      "avg_price": 4570734
+    },
+    {
+      "district": "Praha 10",
+      "region": "Prague",
+      "count": 1291,
+      "avg_price_m2": 74737,
+      "avg_price": 6973138
+    },
+    {
+      "district": "Uherské Hradiště",
+      "region": "Zlín region",
+      "count": 1269,
+      "avg_price_m2": 10800,
+      "avg_price": 1679775
+    },
+    {
+      "district": "Kladno",
+      "region": "Central Bohemian region",
+      "count": 1255,
+      "avg_price_m2": 50517,
+      "avg_price": 6479061
+    },
+    {
+      "district": "Plzeň-město",
+      "region": "Pilsen region",
+      "count": 1241,
+      "avg_price_m2": 34022,
+      "avg_price": 3888754
+    },
+    {
+      "district": "Zlín",
+      "region": "Zlín region",
+      "count": 1217,
+      "avg_price_m2": 18641,
+      "avg_price": 2736331
+    },
+    {
+      "district": "Frýdek-Místek",
+      "region": "Moravian-Silesian region",
+      "count": 1194,
+      "avg_price_m2": 20605,
+      "avg_price": 3809584
+    }
+  ],
+  "listings_dynamics": {
+    "new_listings": [
+      {
+        "date": "2026-01-06",
+        "count": 93390
+      }
+    ],
+    "closed_listings": []
+  },
+  "price_changes": [],
+  "new_listings": {
+    "period_days": 7,
+    "total_new": 93390,
+    "by_category": [
+      {
+        "category": "Land",
+        "count": 27074
+      },
+      {
+        "category": "Apartments",
+        "count": 26263
+      },
+      {
+        "category": "Houses",
+        "count": 19033
+      },
+      {
+        "category": "Commercial",
+        "count": 18998
+      },
+      {
+        "category": "Other",
+        "count": 2022
+      }
+    ],
+    "top_regions": [
+      {
+        "region": "Central Bohemian region",
+        "count": 13658
+      },
+      {
+        "region": "Prague",
+        "count": 13617
+      },
+      {
+        "region": "South Moravian region",
+        "count": 11355
+      },
+      {
+        "region": "Moravian-Silesian region",
+        "count": 7838
+      },
+      {
+        "region": "Ústí region",
+        "count": 7160
+      }
+    ]
+  }
+}

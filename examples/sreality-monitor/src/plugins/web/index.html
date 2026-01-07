@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sreality Monitor - Map</title>
+    
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css" />
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+        
+        #map { 
+            height: calc(100vh - 60px); 
+            width: 100%; 
+        }
+        
+        .header {
+            height: 60px;
+            background: #2c3e50;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+        }
+        
+        .header h1 {
+            font-size: 1.4rem;
+            font-weight: 500;
+        }
+        
+        .stats {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        
+        .filters {
+            position: absolute;
+            top: 80px;
+            left: 20px;
+            z-index: 1000;
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            min-width: 250px;
+        }
+        
+        .filters h3 {
+            margin-bottom: 12px;
+            font-size: 1rem;
+            color: #2c3e50;
+        }
+        
+        .filter-group {
+            margin-bottom: 12px;
+        }
+        
+        .filter-group label {
+            display: block;
+            margin-bottom: 4px;
+            font-size: 0.85rem;
+            color: #666;
+        }
+        
+        .filter-group select,
+        .filter-group input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 0.9rem;
+        }
+        
+        .price-inputs {
+            display: flex;
+            gap: 8px;
+        }
+        
+        .price-inputs input {
+            width: 50%;
+        }
+        
+        .btn {
+            width: 100%;
+            padding: 10px;
+            background: #3498db;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            margin-top: 8px;
+        }
+        
+        .btn:hover {
+            background: #2980b9;
+        }
+        
+        .btn-reset {
+            background: #95a5a6;
+        }
+        
+        .btn-reset:hover {
+            background: #7f8c8d;
+        }
+        
+        .legend {
+            position: absolute;
+            bottom: 30px;
+            right: 20px;
+            z-index: 1000;
+            background: white;
+            padding: 12px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+        
+        .legend h4 {
+            margin-bottom: 8px;
+            font-size: 0.85rem;
+            color: #2c3e50;
+        }
+        
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.8rem;
+            margin-bottom: 4px;
+        }
+        
+        .legend-color {
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+        }
+        
+        .leaflet-popup-content {
+            margin: 12px;
+            min-width: 200px;
+        }
+        
+        .popup-title {
+            font-weight: 600;
+            font-size: 1rem;
+            margin-bottom: 8px;
+            color: #2c3e50;
+        }
+        
+        .popup-price {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #27ae60;
+            margin-bottom: 8px;
+        }
+        
+        .popup-price-m2 {
+            font-size: 0.85rem;
+            color: #666;
+            margin-bottom: 8px;
+        }
+        
+        .popup-info {
+            font-size: 0.85rem;
+            color: #555;
+            line-height: 1.5;
+        }
+        
+        .popup-link {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 6px 12px;
+            background: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 0.85rem;
+        }
+        
+        .popup-link:hover {
+            background: #2980b9;
+        }
+        
+        .popup-status {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 3px;
+            font-size: 0.75rem;
+            margin-bottom: 8px;
+        }
+        
+        .popup-status.active {
+            background: #d4edda;
+            color: #155724;
+        }
+        
+        .popup-status.closed {
+            background: #f8d7da;
+            color: #721c24;
+        }
+        
+        .loading {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2000;
+            background: white;
+            padding: 20px 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.3);
+            font-size: 1.1rem;
+        }
+        
+        .hidden { display: none; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Sreality Monitor</h1>
+        <div style="display: flex; align-items: center; gap: 20px;">
+            <div class="stats" id="stats">Loading...</div>
+            <a href="dashboard.html" style="color: white; text-decoration: none; background: rgba(255,255,255,0.2); padding: 6px 12px; border-radius: 4px; font-size: 0.9rem;">📊 Analytics</a>
+        </div>
+    </div>
+    
+    <div id="map"></div>
+    
+    <div class="filters">
+        <h3>Filters</h3>
+        
+        <div class="filter-group">
+            <label>Type</label>
+            <select id="filterType">
+                <option value="">All Types</option>
+                <option value="1">Sale</option>
+                <option value="2">Lease</option>
+            </select>
+        </div>
+        
+        <div class="filter-group">
+            <label>Category</label>
+            <select id="filterCategory">
+                <option value="">All Categories</option>
+                <option value="1">Apartments</option>
+                <option value="2">Houses</option>
+                <option value="3">Land</option>
+                <option value="4">Commercial</option>
+                <option value="5">Other</option>
+            </select>
+        </div>
+        
+        <div class="filter-group">
+            <label>Region</label>
+            <select id="filterRegion">
+                <option value="">All Regions</option>
+            </select>
+        </div>
+        
+        <div class="filter-group">
+            <label>Price (CZK)</label>
+            <div class="price-inputs">
+                <input type="number" id="priceMin" placeholder="Min">
+                <input type="number" id="priceMax" placeholder="Max">
+            </div>
+        </div>
+        
+        <div class="filter-group">
+            <label>Status</label>
+            <select id="filterStatus">
+                <option value="active">Active</option>
+                <option value="closed">Closed</option>
+                <option value="">All</option>
+            </select>
+        </div>
+        
+        <button class="btn" onclick="applyFilters()">Apply Filters</button>
+        <button class="btn btn-reset" onclick="resetFilters()">Reset</button>
+    </div>
+    
+    <div class="legend">
+        <h4>Price per m²</h4>
+        <div class="legend-item"><div class="legend-color" style="background: #27ae60"></div> &lt; 50k CZK</div>
+        <div class="legend-item"><div class="legend-color" style="background: #f1c40f"></div> 50k - 100k CZK</div>
+        <div class="legend-item"><div class="legend-color" style="background: #e67e22"></div> 100k - 150k CZK</div>
+        <div class="legend-item"><div class="legend-color" style="background: #e74c3c"></div> &gt; 150k CZK</div>
+        <div class="legend-item"><div class="legend-color" style="background: #95a5a6"></div> No price</div>
+    </div>
+    
+    <div class="loading" id="loading">Loading estates...</div>
+    
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js"></script>
+    
+    <script>
+        let map;
+        let markers;
+        let allEstates = [];
+        let regions = {};
+        
+        // Price color coding
+        function getPriceColor(priceM2) {
+            if (!priceM2) return '#95a5a6';
+            if (priceM2 < 50000) return '#27ae60';
+            if (priceM2 < 100000) return '#f1c40f';
+            if (priceM2 < 150000) return '#e67e22';
+            return '#e74c3c';
+        }
+        
+        // Create marker icon
+        function createIcon(color) {
+            return L.divIcon({
+                className: 'custom-marker',
+                html: `<div style="
+                    background: ${color};
+                    width: 12px;
+                    height: 12px;
+                    border-radius: 50%;
+                    border: 2px solid white;
+                    box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+                "></div>`,
+                iconSize: [12, 12],
+                iconAnchor: [6, 6]
+            });
+        }
+        
+        // Format price
+        function formatPrice(price) {
+            if (!price) return 'Price on request';
+            return new Intl.NumberFormat('cs-CZ').format(price) + ' CZK';
+        }
+        
+        // Create popup content
+        function createPopup(estate) {
+            const statusClass = estate.status === 'active' ? 'active' : 'closed';
+            const statusText = estate.status === 'active' ? 'Active' : 'Closed';
+            
+            return `
+                <div class="popup-status ${statusClass}">${statusText}</div>
+                <div class="popup-title">${estate.name || 'No title'}</div>
+                <div class="popup-price">${formatPrice(estate.price)}</div>
+                ${estate.price_m2 ? `<div class="popup-price-m2">${formatPrice(estate.price_m2)} / m²</div>` : ''}
+                <div class="popup-info">
+                    ${estate.city || ''}${estate.citypart ? ', ' + estate.citypart : ''}<br>
+                    ${getCategoryName(estate.category_main_id)} - ${getTypeName(estate.category_type_id)}
+                </div>
+                <a class="popup-link" href="${estate.url}" target="_blank">
+                    View on Sreality →
+                </a>
+            `;
+        }
+        
+        function getCategoryName(id) {
+            const names = {1: 'Apartments', 2: 'Houses', 3: 'Land', 4: 'Commercial', 5: 'Other'};
+            return names[id] || 'Unknown';
+        }
+        
+        function getTypeName(id) {
+            const names = {1: 'Sale', 2: 'Lease', 3: 'Auction', 4: 'Shares'};
+            return names[id] || 'Unknown';
+        }
+        
+        // Initialize map
+        function initMap() {
+            map = L.map('map').setView([49.8, 15.5], 8);
+            
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '© OpenStreetMap contributors'
+            }).addTo(map);
+            
+            markers = L.markerClusterGroup({
+                maxClusterRadius: 50,
+                spiderfyOnMaxZoom: true,
+                showCoverageOnHover: false,
+                zoomToBoundsOnClick: true
+            });
+            
+            map.addLayer(markers);
+        }
+        
+        // Load estates data
+        async function loadEstates() {
+            try {
+                const response = await fetch('estates.json');
+                const data = await response.json();
+                
+                allEstates = data.estates;
+                regions = data.regions || {};
+                
+                // Populate regions dropdown
+                const regionSelect = document.getElementById('filterRegion');
+                Object.entries(regions).forEach(([id, name]) => {
+                    const option = document.createElement('option');
+                    option.value = id;
+                    option.textContent = name;
+                    regionSelect.appendChild(option);
+                });
+                
+                displayEstates(allEstates);
+                updateStats(allEstates.length, allEstates.filter(e => e.status === 'active').length);
+                
+                document.getElementById('loading').classList.add('hidden');
+            } catch (error) {
+                console.error('Error loading estates:', error);
+                document.getElementById('loading').textContent = 'Error loading data';
+            }
+        }
+        
+        // Display estates on map
+        function displayEstates(estates) {
+            markers.clearLayers();
+            
+            estates.forEach(estate => {
+                if (!estate.lat || !estate.lon) return;
+                
+                const color = getPriceColor(estate.price_m2);
+                const icon = createIcon(color);
+                
+                const marker = L.marker([estate.lat, estate.lon], { icon })
+                    .bindPopup(createPopup(estate));
+                
+                markers.addLayer(marker);
+            });
+        }
+        
+        // Update stats display
+        function updateStats(total, active) {
+            document.getElementById('stats').textContent = 
+                `${total.toLocaleString()} estates (${active.toLocaleString()} active)`;
+        }
+        
+        // Apply filters
+        function applyFilters() {
+            const type = document.getElementById('filterType').value;
+            const category = document.getElementById('filterCategory').value;
+            const region = document.getElementById('filterRegion').value;
+            const priceMin = document.getElementById('priceMin').value;
+            const priceMax = document.getElementById('priceMax').value;
+            const status = document.getElementById('filterStatus').value;
+            
+            let filtered = allEstates.filter(estate => {
+                if (type && estate.category_type_id != type) return false;
+                if (category && estate.category_main_id != category) return false;
+                if (region && estate.region_id != region) return false;
+                if (priceMin && estate.price < parseInt(priceMin)) return false;
+                if (priceMax && estate.price > parseInt(priceMax)) return false;
+                if (status && estate.status !== status) return false;
+                return true;
+            });
+            
+            displayEstates(filtered);
+            updateStats(filtered.length, filtered.filter(e => e.status === 'active').length);
+        }
+        
+        // Reset filters
+        function resetFilters() {
+            document.getElementById('filterType').value = '';
+            document.getElementById('filterCategory').value = '';
+            document.getElementById('filterRegion').value = '';
+            document.getElementById('priceMin').value = '';
+            document.getElementById('priceMax').value = '';
+            document.getElementById('filterStatus').value = 'active';
+            
+            displayEstates(allEstates);
+            updateStats(allEstates.length, allEstates.filter(e => e.status === 'active').length);
+        }
+        
+        // Initialize
+        initMap();
+        loadEstates();
+    </script>
+</body>
+</html>

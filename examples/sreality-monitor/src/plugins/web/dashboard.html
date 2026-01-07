@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sreality Analytics Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f5f6fa;
+            color: #2c3e50;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .header h1 { font-size: 2rem; margin-bottom: 5px; }
+        .header p { opacity: 0.8; }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .summary-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+        }
+        
+        .card-stat {
+            text-align: center;
+        }
+        
+        .card-stat .value {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #667eea;
+        }
+        
+        .card-stat .label {
+            color: #666;
+            font-size: 0.9rem;
+            margin-top: 5px;
+        }
+        
+        .charts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .chart-card {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+        }
+        
+        .chart-card h3 {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+            color: #2c3e50;
+        }
+        
+        .table-card {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            margin-bottom: 20px;
+        }
+        
+        .table-card h3 {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+        
+        th {
+            background: #f8f9fa;
+            font-weight: 600;
+            font-size: 0.85rem;
+            color: #666;
+        }
+        
+        td { font-size: 0.9rem; }
+        
+        .price-up { color: #e74c3c; }
+        .price-down { color: #27ae60; }
+        
+        .badge {
+            display: inline-block;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+        
+        .badge-sale { background: #d4edda; color: #155724; }
+        .badge-lease { background: #cce5ff; color: #004085; }
+        
+        .nav-link {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background: white;
+            color: #667eea;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 500;
+        }
+        
+        .nav-link:hover { background: #f0f0f0; }
+        
+        .loading {
+            text-align: center;
+            padding: 50px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Sreality Analytics Dashboard</h1>
+        <p>Real Estate Market Overview</p>
+        <a href="index.html" class="nav-link">← Back to Map</a>
+    </div>
+    
+    <div class="container">
+        <div id="content">
+            <div class="loading">Loading analytics data...</div>
+        </div>
+    </div>
+    
+    <script>
+        let data = null;
+        
+        function formatNumber(num) {
+            if (num >= 1000000) return (num / 1000000).toFixed(1) + 'M';
+            if (num >= 1000) return (num / 1000).toFixed(0) + 'k';
+            return num.toLocaleString();
+        }
+        
+        function formatPrice(price) {
+            return new Intl.NumberFormat('cs-CZ').format(price) + ' CZK';
+        }
+        
+        async function loadData() {
+            try {
+                
+                const response = await fetch('analytics.json');
+                data = await response.json();
+                renderDashboard();
+            } catch (error) {
+                document.getElementById('content').innerHTML = 
+                    '<div class="loading">Error loading data. Run analytics export first.</div>';
+            }
+        }
+        
+        function renderDashboard() {
+            const s = data.summary;
+            
+            document.getElementById('content').innerHTML = `
+                <div class="summary-cards">
+                    <div class="card card-stat">
+                        <div class="value">${formatNumber(s.total_active)}</div>
+                        <div class="label">Active Listings</div>
+                    </div>
+                    <div class="card card-stat">
+                        <div class="value">${formatNumber(s.total_closed)}</div>
+                        <div class="label">Closed Listings</div>
+                    </div>
+                    <div class="card card-stat">
+                        <div class="value">${formatNumber(s.avg_price)}</div>
+                        <div class="label">Avg Price (CZK)</div>
+                    </div>
+                    <div class="card card-stat">
+                        <div class="value">${formatNumber(s.avg_price_m2)}</div>
+                        <div class="label">Avg Price/m² (CZK)</div>
+                    </div>
+                    <div class="card card-stat">
+                        <div class="value">${formatNumber(s.total_price_changes)}</div>
+                        <div class="label">Price Changes</div>
+                    </div>
+                    <div class="card card-stat">
+                        <div class="value">${s.total_agencies}</div>
+                        <div class="label">Agencies</div>
+                    </div>
+                </div>
+                
+                <div class="charts-grid">
+                    <div class="chart-card">
+                        <h3>Price/m² by Region</h3>
+                        <canvas id="regionChart"></canvas>
+                    </div>
+                    <div class="chart-card">
+                        <h3>Price Distribution (Sale)</h3>
+                        <canvas id="priceDistChart"></canvas>
+                    </div>
+                    <div class="chart-card">
+                        <h3>Price/m² Distribution</h3>
+                        <canvas id="m2DistChart"></canvas>
+                    </div>
+                    <div class="chart-card">
+                        <h3>Listings by Category</h3>
+                        <canvas id="categoryChart"></canvas>
+                    </div>
+                </div>
+                
+                <div class="table-card">
+                    <h3>Top Districts by Listings</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>District</th>
+                                <th>Region</th>
+                                <th>Listings</th>
+                                <th>Avg Price/m²</th>
+                                <th>Avg Price</th>
+                            </tr>
+                        </thead>
+                        <tbody id="districtsTable"></tbody>
+                    </table>
+                </div>
+                
+                <div class="table-card">
+                    <h3>Recent Price Changes</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Property</th>
+                                <th>City</th>
+                                <th>Old Price</th>
+                                <th>New Price</th>
+                                <th>Change</th>
+                            </tr>
+                        </thead>
+                        <tbody id="priceChangesTable"></tbody>
+                    </table>
+                </div>
+            `;
+            
+            renderCharts();
+            renderTables();
+        }
+        
+        function renderCharts() {
+            // Region chart
+            const regionData = data.price_by_region.slice(0, 10);
+            new Chart(document.getElementById('regionChart'), {
+                type: 'bar',
+                data: {
+                    labels: regionData.map(r => r.region),
+                    datasets: [{
+                        label: 'Price/m² (CZK)',
+                        data: regionData.map(r => r.avg_price_m2),
+                        backgroundColor: '#667eea'
+                    }]
+                },
+                options: {
+                    indexAxis: 'y',
+                    plugins: { legend: { display: false } }
+                }
+            });
+            
+            // Price distribution
+            new Chart(document.getElementById('priceDistChart'), {
+                type: 'bar',
+                data: {
+                    labels: data.price_distribution.sale_price.map(p => p.range),
+                    datasets: [{
+                        label: 'Listings',
+                        data: data.price_distribution.sale_price.map(p => p.count),
+                        backgroundColor: '#764ba2'
+                    }]
+                },
+                options: { plugins: { legend: { display: false } } }
+            });
+            
+            // Price/m² distribution
+            new Chart(document.getElementById('m2DistChart'), {
+                type: 'bar',
+                data: {
+                    labels: data.price_distribution.price_per_m2.map(p => p.range),
+                    datasets: [{
+                        label: 'Listings',
+                        data: data.price_distribution.price_per_m2.map(p => p.count),
+                        backgroundColor: '#27ae60'
+                    }]
+                },
+                options: { plugins: { legend: { display: false } } }
+            });
+            
+            // Category chart
+            new Chart(document.getElementById('categoryChart'), {
+                type: 'doughnut',
+                data: {
+                    labels: data.price_by_category.slice(0, 6).map(c => `${c.type} - ${c.category}`),
+                    datasets: [{
+                        data: data.price_by_category.slice(0, 6).map(c => c.count),
+                        backgroundColor: ['#667eea', '#764ba2', '#27ae60', '#f1c40f', '#e74c3c', '#95a5a6']
+                    }]
+                }
+            });
+        }
+        
+        function renderTables() {
+            // Districts table
+            const districtsHtml = data.top_districts.map(d => `
+                <tr>
+                    <td><strong>${d.district}</strong></td>
+                    <td>${d.region}</td>
+                    <td>${d.count.toLocaleString()}</td>
+                    <td>${formatPrice(d.avg_price_m2)}</td>
+                    <td>${formatPrice(d.avg_price)}</td>
+                </tr>
+            `).join('');
+            document.getElementById('districtsTable').innerHTML = districtsHtml;
+            
+            // Price changes table
+            const changesHtml = data.price_changes.slice(0, 15).map(p => {
+                const changeClass = p.change_pct > 0 ? 'price-up' : 'price-down';
+                const arrow = p.change_pct > 0 ? '↑' : '↓';
+                return `
+                    <tr>
+                        <td>${p.name || 'N/A'}</td>
+                        <td>${p.city || 'N/A'}</td>
+                        <td>${formatPrice(p.old_price)}</td>
+                        <td>${formatPrice(p.new_price)}</td>
+                        <td class="${changeClass}">${arrow} ${Math.abs(p.change_pct)}%</td>
+                    </tr>
+                `;
+            }).join('');
+            document.getElementById('priceChangesTable').innerHTML = changesHtml || '<tr><td colspan="5">No price changes yet</td></tr>';
+        }
+        
+        loadData();
+    </script>
+</body>
+</html>
