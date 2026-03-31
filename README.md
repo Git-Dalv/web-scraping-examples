@@ -41,7 +41,7 @@ This portfolio showcases my web scraping expertise across multiple domains and c
 
 ---
 
-### 2. 🛒 Euroelectronics E-commerce Scraper (Shopify)
+### 2. Euroelectronics E-commerce Scraper (Shopify)
 
 **Problem Solved:** E-commerce businesses need competitor price data and product catalog information for market analysis, but Shopify stores have rate limiting and pagination challenges.
 
